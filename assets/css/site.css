@@ -263,3 +263,94 @@ h1{
 .gallery-sub{
   margin-top:8px;
 }
+
+ㅋㅋㅋㅋ 오케이… 이건 “그리드 망함”이 아니라 모달(dialog) 스타일을 날려버려서 모달이 ‘그냥 페이지 위에 큰 박스’로 떠버린 상태예요.
+지금 스샷은 이미지 눌렀을 때 뜨는 모달이 제대로 덮지 못하고(백드롭 없음), 크기 제한도 없어서 화면을 덮어쓴 거고요.
+
+✅ 해결은 간단: 그리드는 우리가 준 3열 고정 유지하고, 모달 CSS만 다시 살려서 ‘정상 팝업’처럼 만들면 끝.
+
+아래를 그대로 하세요.
+
+1) assets/css/site.css 맨 아래에 “추가로” 붙여넣기 (삭제 말고 추가!)
+
+(지금 뭐가 들어있든, 맨 아래에 붙이면 이게 최종으로 이깁니다)
+
+/* ===== GALLERY: 3 columns + modal fix (append at end) ===== */
+
+/* 3열 고정 */
+.gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:28px;
+}
+
+@media (max-width:1000px){
+  .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width:600px){
+  .gallery-grid{ grid-template-columns: 1fr; }
+}
+
+/* 카드 안쪽 패딩(기존 .card padding 때문에 이미지가 찌그러질 수 있어서 제거) */
+.gallery-card{
+  padding:0 !important;       /* 핵심 */
+  overflow:hidden;
+  border-radius:18px;
+}
+
+/* 썸네일 */
+.gallery-btn{
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+}
+
+.gallery-img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  display:block;
+}
+
+/* 캡션 */
+.gallery-cap{ padding:16px; }
+.gallery-title{ font-size:18px; margin:0; }
+.gallery-sub{ margin:8px 0 0; }
+
+
+/* ===== MODAL (dialog) 정상화 ===== */
+.gallery-modal{
+  border:none;
+  padding:0;
+  background:transparent;
+}
+
+/* 백드롭 다시 살리기 */
+.gallery-modal::backdrop{
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(6px);
+}
+
+/* 모달 박스 */
+.gallery-modal__inner{
+  width: min(980px, calc(100vw - 32px));
+  margin: 8vh auto 0;
+  padding: 18px;
+}
+
+/* 모달 이미지: 화면을 넘지 않게 제한 */
+.gallery-modal__imgwrap{
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(245,251,250,.14);
+}
+
+.gallery-modal__imgwrap img{
+  width:100%;
+  max-height: 70vh;        /* 핵심: 화면 넘침 방지 */
+  object-fit: contain;     /* cover 말고 contain */
+  display:block;
+}
