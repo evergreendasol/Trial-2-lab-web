@@ -13,9 +13,9 @@ title: Gallery
 </section>
 
 <section class="section team-section">
-  <div class="grid team-grid gallery-grid">
+  <div class="gallery-grid">
     {% for item in site.data.gallery %}
-      <figure class="card team-card gallery-card">
+      <figure class="card gallery-card">
         <button class="gallery-btn" type="button"
           data-src="{{ item.src | relative_url }}"
           data-title="{{ item.title | escape }}"
