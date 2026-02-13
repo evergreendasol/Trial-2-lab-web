@@ -141,3 +141,79 @@ h1{
   .grid{grid-template-columns:1fr}
   .footer__grid{grid-template-columns:1fr}
 }
+
+/* NAV FIX: keep links aligned + contact button size */
+.nav__inner{
+  gap:16px;
+}
+
+.nav__links{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:nowrap;          /* 기본은 한 줄 유지 */
+  white-space:nowrap;        /* 텍스트 줄바꿈 방지 */
+}
+
+.nav__links a{
+  margin-left:0;             /* 기존 margin-left 제거(우리는 gap 사용) */
+}
+
+/* nav 안에서 버튼(예: Contact)만 살짝 컴팩트하게 */
+.nav .btn{
+  padding:10px 14px;
+  font-size:14px;
+}
+
+/* 작은 화면에서는 자연스럽게 두 줄로 (깨지지 않게) */
+@media (max-width:900px){
+  .nav__inner{
+    height:auto;
+    padding:10px 0;
+    flex-wrap:wrap;
+  }
+  .nav__links{
+    width:100%;
+    flex-wrap:wrap;
+    white-space:normal;
+    gap:12px;
+  }
+}
+
+/* NAV FIX: keep links aligned + contact button size */
+.nav__inner{
+  gap:16px;
+}
+
+.nav__links{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:nowrap;          /* 기본은 한 줄 유지 */
+  white-space:nowrap;        /* 텍스트 줄바꿈 방지 */
+}
+
+.nav__links a{
+  margin-left:0;             /* 기존 margin-left 제거(우리는 gap 사용) */
+}
+
+/* nav 안에서 버튼(예: Contact)만 살짝 컴팩트하게 */
+.nav .btn{
+  padding:10px 14px;
+  font-size:14px;
+}
+
+/* 작은 화면에서는 자연스럽게 두 줄로 (깨지지 않게) */
+@media (max-width:900px){
+  .nav__inner{
+    height:auto;
+    padding:10px 0;
+    flex-wrap:wrap;
+  }
+  .nav__links{
+    width:100%;
+    flex-wrap:wrap;
+    white-space:normal;
+    gap:12px;
+  }
+}
