@@ -21,7 +21,7 @@ title: Home
 
 {% include carousel.html %}
 
-<section class="section" id="main-content">
+<section class="section" id="highlights">
   <div class="container">
     <div class="section__head">
       <h2><span class="i18n-en">Highlights</span><span class="i18n-ko">주요 연구</span></h2>
