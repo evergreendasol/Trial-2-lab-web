@@ -1,11 +1,95 @@
 - year: 2026
-  title: "TBD"
-  authors: "TBD"
-  venue: "TBD"
+  authors: "Yoon, Seungri, and Tae In Ahn"
+  title: "Design and Evaluation of an LLM-Based Knowledge Graph System for Photosynthesis Research"
+  venue: "IEEE Access 14 (2026): 9193-9200"
   url: ""
 
 - year: 2025
-  title: "TBD"
-  authors: "TBD"
-  venue: "TBD"
+  authors: "Min-Seok Gang, Hak-Jin Kim, Sung Kwon Park, Woo-Jae Cho, Taehyeong Kim, Tae In Ahn, Joon Yong Kim, and Kue-Seung Hwang"
+  title: "Plant-specific crop evapotranspiration estimation system for greenhouse tomatoes using convolutional neural network and rail-based monitoring device"
+  venue: "Computers and Electronics in Agriculture 239 (2025): 111079"
+  url: ""
+
+- year: 2025
+  authors: "Kang, Jun Hyeun, Jung Eek Son, and Tae In Ahn"
+  title: "Data-driven Prediction of Species-Specific Plant Responses to Spectral-Shifting Films from Leaf Phenotypic and Photosynthetic Traits"
+  venue: "arXiv preprint arXiv:2511.15173 (2025)"
+  url: ""
+
+- year: 2025
+  authors: "Kim, Hyeonjee, Eunjeong Lim, and Tae In Ahn"
+  title: "Temporal and Age-Dependent Dynamics of Photoinhibitory Responses under Diverse Light Scenarios"
+  venue: "Journal of Bio-Environment Control 34.4 (2025): 619-630"
+  url: ""
+
+- year: 2025
+  authors: "Min-Seok Gang, Hak-Jin Kim, Tae In Ahn, Woo-Jae Cho, Sang-Hyun Lee, Ju Young Lee, and Ji-Eun Hwang"
+  title: "Development of nutrient management system based on ion-equivalent concentration ratio and ion monitoring to maintain ionic balance in closed hydroponic solution"
+  venue: "Computers and Electronics in Agriculture 237 (2025): 110588"
+  url: ""
+
+- year: 2025
+  authors: "Jun Hyeun Kang, Ju Young Lee, and Tae In Ahn"
+  title: "Enhancement of sweet pepper photosynthesis and yield with green-to-red sunlight conversion despite reduced daily light integral"
+  venue: "Horticulture, Environment, and Biotechnology (2025): 1-12"
+  url: ""
+
+- year: 2025
+  authors: "Seungri Yoon, Woosang Jeon, Sanghyeok Choi, Taehyeong Kim, and Tae In Ahn"
+  title: "Knowledge Synthesis of Photosynthesis Research Using a Large Language Model"
+  venue: "arXiv preprint arXiv:2502.01059 (2025)"
+  url: ""
+
+- year: 2024
+  authors: "Tae In Ahn, Jung-Seok Yang, Yong-Hoon Im, Young Jik Youn, Dahae Kim, and Ju Young Lee"
+  title: "Nationwide analysis of greenhouse effluents reveals robustness of crops as a modulator of ambient stoichiometry"
+  venue: "Journal of Cleaner Production 482 (2024): 144127"
+  url: ""
+
+- year: 2024
+  authors: "Seungri Yoon, Yeyeong Lee, Eunkyu Jung, and Tae In Ahn"
+  title: "Agricultural Applicability of AI based Image Generation"
+  venue: "Journal of Bio-Environment Control 33.2 (2024): 120-128"
+  url: ""
+
+- year: 2024
+  authors: "Seungri Yoon, Minju Shin, Jin Hyun Kim, Ho Jeong Jeong, Junyoung Park, and Tae In Ahn"
+  title: "Computer vision approach for phenotypic characterization of horticultural crops"
+  venue: "Journal of Bio-Environment Control 33.1 (2024): 63-70"
+  url: ""
+
+- year: 2024
+  authors: "Seungri Yoon, Yunseong Cho, Minju Shin, Mi Young Lin, Dahae Kim, and Tae In Ahn"
+  title: "Melon fruit detection and quality assessment using generative ai-based image data augmentation"
+  venue: "Journal of Bio-Environment Control 33.4 (2024): 352-360"
+  url: ""
+
+- year: 2023
+  authors: "Seungri Yoon, Minju Shin, Jin Hyun Kim, Ji Wong Bang, Ho Jeong Jeong, and Tae In Ahn"
+  title: "Analysis of the relationship between melon fruit growth and net quality using computer vision and fruit modeling"
+  venue: "Journal of Bio-Environment Control 32.4 (2023): 456-465"
+  url: ""
+
+- year: 2023
+  authors: "Jun Hyeun Kang, Hyo In Yoon, Jaewoo Kim, Tae In Ahn, and Jung Eek Son"
+  title: "Ray-tracing analysis on the far-red induced light-capturing ability of kale"
+  venue: "Scientia Horticulturae 311 (2023): 111806"
+  url: ""
+
+- year: 2023
+  authors: "Seungri Yoon, Jin Hyun Kim, Minju Shin, Dongpil Kim, Ji Wong Bang, Ho Jeong Jeong, and Tae In Ahn"
+  title: "Thermal behavior and leaf temperature in a high pressure sodium lamp supplemented greenhouse"
+  venue: "Journal of Bio-Environment Control 32.1 (2023): 48-56"
+  url: ""
+
+- year: 2022
+  authors: "Taewon Moon, Dongpil Kim, Sungmin Kwon, Tae In Ahn, and Jung Eek Son"
+  title: "Non-destructive monitoring of crop fresh weight and leaf area with a simple formula and a convolutional neural network"
+  venue: "Sensors 22.20 (2022): 7728"
+  url: ""
+
+- year: 2022
+  authors: "Tae In Ahn, and Jung Eek Son"
+  title: "Application of an alternative nutrient replenishment method to electrical conductivity-based closed-loop soilless cultures of sweet peppers"
+  venue: "Horticulturae 8.4 (2022): 295"
   url: ""
