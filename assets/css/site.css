@@ -409,8 +409,8 @@ a:hover{color:var(--accent)}
    ========================= */
 .team-summary-grid{
   display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:16px;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
 .team-summary-card{
@@ -420,7 +420,7 @@ a:hover{color:var(--accent)}
   text-align:center;
   text-decoration:none;
   color:var(--text);
-  padding:24px 14px 20px;
+  padding:28px 18px 22px;
   border-radius:18px;
   background:var(--panel);
   border:1px solid var(--line);
@@ -464,10 +464,10 @@ a:hover{color:var(--accent)}
 }
 
 @media (max-width:900px){
-  .team-summary-grid{grid-template-columns:repeat(3,1fr)}
+  .team-summary-grid{grid-template-columns:repeat(3,1fr);gap:16px}
 }
 @media (max-width:500px){
-  .team-summary-grid{grid-template-columns:repeat(2,1fr)}
+  .team-summary-grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .team-summary-card{padding:18px 10px 16px}
   .team-summary-card__count{font-size:26px}
 }
