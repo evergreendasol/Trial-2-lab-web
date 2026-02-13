@@ -1,15 +1,23 @@
 - date: "2026-02-10"
   title: "New paper accepted at Plant Cell & Environment"
+  title_ko: "Plant Cell & Environment 저널 논문 게재 승인"
   summary: "Our latest research on LED lighting strategies for vertical farms has been accepted for publication."
+  summary_ko: "수직농장 LED 조명 전략에 관한 최신 연구가 게재 승인되었습니다."
 
 - date: "2026-01-15"
   title: "Lab seminar: Smart greenhouse sensor networks"
+  title_ko: "연구실 세미나: 스마트 온실 센서 네트워크"
   summary: "Dr. Kim presented recent advances in IoT-based environmental monitoring for greenhouse systems."
+  summary_ko: "김 박사가 IoT 기반 온실 환경 모니터링의 최신 동향을 발표했습니다."
 
 - date: "2025-12-20"
   title: "Best Poster Award at ISHS 2025"
+  title_ko: "ISHS 2025 우수 포스터상 수상"
   summary: "Congratulations to our graduate students for winning the best poster award at the International Society for Horticultural Science symposium."
+  summary_ko: "국제원예학회(ISHS) 심포지엄에서 우수 포스터상을 수상한 대학원생들을 축하합니다."
 
 - date: "2025-11-08"
   title: "New research grant awarded"
+  title_ko: "신규 연구비 수주"
   summary: "Our lab received funding from the National Research Foundation for plant factory optimization research."
+  summary_ko: "식물공장 최적화 연구를 위한 한국연구재단 연구비를 수주했습니다."

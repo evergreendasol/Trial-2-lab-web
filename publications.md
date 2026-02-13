@@ -7,8 +7,8 @@ title: Publications
 
 <section class="section">
   <div class="section__head">
-    <h1 class="page-title">Publications</h1>
-    <p class="muted small">Selected publications and research outputs</p>
+    <h1 class="page-title"><span class="i18n-en">Publications</span><span class="i18n-ko">논문</span></h1>
+    <p class="muted small"><span class="i18n-en">Selected publications and research outputs</span><span class="i18n-ko">주요 논문 및 연구 성과</span></p>
   </div>
 </section>
 
@@ -41,7 +41,7 @@ title: Publications
       <p class="pub-card__venue">{{ pub.venue }}</p>
       {% if pub.url and pub.url != "" %}
         <p class="pub-card__link">
-          <a class="link" href="{{ pub.url }}">View Paper &rarr;</a>
+          <a class="link" href="{{ pub.url }}"><span class="i18n-en">View Paper</span><span class="i18n-ko">논문 보기</span> &rarr;</a>
         </p>
       {% endif %}
     </div>

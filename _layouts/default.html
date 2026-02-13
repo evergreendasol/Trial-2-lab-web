@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ site.lang | default: 'en' }}" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
@@ -10,18 +10,25 @@
 
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 
-  <!-- Prevent FOUC: apply saved theme before render -->
+  <!-- Prevent FOUC: apply saved theme & lang before render -->
   <script>
     (function(){
       var t = localStorage.getItem('theme');
       if(t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+      var l = localStorage.getItem('lang');
+      if(l === 'ko'){
+        document.documentElement.setAttribute('data-lang','ko');
+        document.documentElement.setAttribute('lang','ko');
+      } else {
+        document.documentElement.setAttribute('data-lang','en');
+      }
     })();
   </script>
 </head>
 <body{% if page.url == '/' or page.url == '/index.html' %} class="home"{% endif %}>
 
   <!-- Skip to main content -->
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content"><span class="i18n-en">Skip to main content</span><span class="i18n-ko">본문으로 건너뛰기</span></a>
 
   <!-- NAVIGATION -->
   <nav class="nav" aria-label="Main navigation">
@@ -31,21 +38,23 @@
       </a>
 
       <div class="nav__links">
-        <a href="{{ '/team' | relative_url }}"{% if page.url == '/team' or page.url == '/team/' %} class="nav--active"{% endif %}>Team</a>
-        <a href="{{ '/research' | relative_url }}"{% if page.url == '/research' or page.url == '/research/' %} class="nav--active"{% endif %}>Research</a>
-        <a href="{{ '/publications' | relative_url }}"{% if page.url == '/publications' or page.url == '/publications/' %} class="nav--active"{% endif %}>Publications</a>
-        <a href="{{ '/gallery' | relative_url }}"{% if page.url == '/gallery' or page.url == '/gallery/' %} class="nav--active"{% endif %}>Gallery</a>
-        <a href="{{ '/contact' | relative_url }}"{% if page.url == '/contact' or page.url == '/contact/' %} class="nav--active"{% endif %}>Contact</a>
+        <a href="{{ '/team' | relative_url }}"{% if page.url == '/team' or page.url == '/team/' %} class="nav--active"{% endif %}><span class="i18n-en">Team</span><span class="i18n-ko">구성원</span></a>
+        <a href="{{ '/research' | relative_url }}"{% if page.url == '/research' or page.url == '/research/' %} class="nav--active"{% endif %}><span class="i18n-en">Research</span><span class="i18n-ko">연구</span></a>
+        <a href="{{ '/publications' | relative_url }}"{% if page.url == '/publications' or page.url == '/publications/' %} class="nav--active"{% endif %}><span class="i18n-en">Publications</span><span class="i18n-ko">논문</span></a>
+        <a href="{{ '/gallery' | relative_url }}"{% if page.url == '/gallery' or page.url == '/gallery/' %} class="nav--active"{% endif %}><span class="i18n-en">Gallery</span><span class="i18n-ko">갤러리</span></a>
+        <a href="{{ '/contact' | relative_url }}"{% if page.url == '/contact' or page.url == '/contact/' %} class="nav--active"{% endif %}><span class="i18n-en">Contact</span><span class="i18n-ko">연락처</span></a>
 
         <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-          <!-- Moon icon (shown in light mode) -->
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
           </svg>
-          <!-- Sun icon (shown in dark mode) -->
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </svg>
+        </button>
+
+        <button class="lang-toggle" type="button" aria-label="Toggle language">
+          <span class="i18n-en">KO</span><span class="i18n-ko">EN</span>
         </button>
       </div>
     </div>
@@ -62,44 +71,60 @@
       <div>
         <h3>{{ site.title }}</h3>
         <p class="small muted">
-          Greenhouse Horticulture & Plant Factory Lab
+          <span class="i18n-en">Greenhouse Horticulture & Plant Factory Lab</span><span class="i18n-ko">온실원예 및 식물공장 연구실</span>
         </p>
       </div>
 
       <div>
-        <h4>Navigation</h4>
-        <a href="{{ '/team' | relative_url }}">Team</a><br>
-        <a href="{{ '/research' | relative_url }}">Research</a><br>
-        <a href="{{ '/publications' | relative_url }}">Publications</a><br>
-        <a href="{{ '/gallery' | relative_url }}">Gallery</a><br>
-        <a href="{{ '/contact' | relative_url }}">Contact</a>
+        <h4><span class="i18n-en">Navigation</span><span class="i18n-ko">바로가기</span></h4>
+        <a href="{{ '/team' | relative_url }}"><span class="i18n-en">Team</span><span class="i18n-ko">구성원</span></a><br>
+        <a href="{{ '/research' | relative_url }}"><span class="i18n-en">Research</span><span class="i18n-ko">연구</span></a><br>
+        <a href="{{ '/publications' | relative_url }}"><span class="i18n-en">Publications</span><span class="i18n-ko">논문</span></a><br>
+        <a href="{{ '/gallery' | relative_url }}"><span class="i18n-en">Gallery</span><span class="i18n-ko">갤러리</span></a><br>
+        <a href="{{ '/contact' | relative_url }}"><span class="i18n-en">Contact</span><span class="i18n-ko">연락처</span></a>
       </div>
 
       <div>
-        <h4>Location</h4>
-        <p class="small muted">1 Gwanak-ro, Gwanak-gu, Seoul, Republic of Korea (08826)</p>
+        <h4><span class="i18n-en">Location</span><span class="i18n-ko">위치</span></h4>
+        <p class="small muted">
+          <span class="i18n-en">1 Gwanak-ro, Gwanak-gu, Seoul, Republic of Korea (08826)</span><span class="i18n-ko">서울특별시 관악구 관악로 1 서울대학교 (08826)</span>
+        </p>
       </div>
     </div>
 
     <div class="container footer__bottom small muted">
-      © {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.
+      &copy; {{ site.time | date: "%Y" }} {{ site.title }}. <span class="i18n-en">All rights reserved.</span><span class="i18n-ko">All rights reserved.</span>
     </div>
   </footer>
 
   <script>
     (function(){
-      var btn = document.querySelector('.theme-toggle');
-      if(!btn) return;
-      btn.addEventListener('click', function(){
-        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        if(isDark){
-          document.documentElement.removeAttribute('data-theme');
-          localStorage.setItem('theme','light');
-        } else {
-          document.documentElement.setAttribute('data-theme','dark');
-          localStorage.setItem('theme','dark');
-        }
-      });
+      /* Theme toggle */
+      var themeBtn = document.querySelector('.theme-toggle');
+      if(themeBtn){
+        themeBtn.addEventListener('click', function(){
+          var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          if(isDark){
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme','light');
+          } else {
+            document.documentElement.setAttribute('data-theme','dark');
+            localStorage.setItem('theme','dark');
+          }
+        });
+      }
+
+      /* Language toggle */
+      var langBtn = document.querySelector('.lang-toggle');
+      if(langBtn){
+        langBtn.addEventListener('click', function(){
+          var cur = document.documentElement.getAttribute('data-lang');
+          var next = (cur === 'ko') ? 'en' : 'ko';
+          document.documentElement.setAttribute('data-lang', next);
+          document.documentElement.setAttribute('lang', next);
+          localStorage.setItem('lang', next);
+        });
+      }
     })();
   </script>
 </body>

@@ -1,12 +1,18 @@
 - id: cea
   title: "Controlled Environment Agriculture"
+  title_ko: "시설원예학"
   tagline: "Smart greenhouse and plant factory systems"
+  tagline_ko: "스마트 온실 및 식물공장 시스템"
   description: >
     Our lab develops advanced controlled environment agriculture (CEA) systems
     including smart greenhouses and vertical plant factories. We integrate
     architectural design, climate engineering, and crop science to create
     production environments that maximize resource efficiency while maintaining
     optimal growing conditions year-round.
+  description_ko: >
+    본 연구실은 스마트 온실과 수직형 식물공장을 포함하는 첨단 시설원예(CEA) 시스템을
+    개발합니다. 건축 설계, 기후 공학, 작물학을 융합하여 연중 최적 재배 환경을 유지하면서
+    자원 효율성을 극대화하는 생산 시스템을 구축합니다.
   topics:
     - Smart Greenhouses
     - Plant Factories
@@ -19,13 +25,19 @@
 
 - id: plant-growth
   title: "Plant Growth & Physiology"
+  title_ko: "식물 생장 및 생리"
   tagline: "Growth responses under environmental conditions"
+  tagline_ko: "환경 조건에 따른 생장 반응"
   description: >
     We study plant physiological responses to environmental stimuli including
     light quality and quantity, temperature regimes, CO₂ concentration, and
     nutrient availability. Our research connects fundamental plant biology
     with practical cultivation strategies to optimize growth, development,
     and quality of horticultural crops.
+  description_ko: >
+    광질·광량, 온도 조건, CO₂ 농도, 양분 가용성 등 환경 자극에 대한 식물의
+    생리적 반응을 연구합니다. 기초 식물생물학과 실용적 재배 전략을 연결하여
+    원예 작물의 생장, 발달 및 품질을 최적화합니다.
   topics:
     - Photomorphogenesis
     - Light Responses
@@ -38,13 +50,19 @@
 
 - id: sensing
   title: "Environmental Sensing & Control"
+  title_ko: "환경 센싱 및 제어"
   tagline: "Sensor integration and automated control systems"
+  tagline_ko: "센서 통합 및 자동 제어 시스템"
   description: >
     Our team designs and deploys integrated sensor networks and automated
     control systems for precision environment management. We develop real-time
     monitoring platforms that combine temperature, humidity, light, and gas
     sensors with intelligent feedback controllers to maintain ideal growing
     conditions with minimal human intervention.
+  description_ko: >
+    정밀 환경 관리를 위한 통합 센서 네트워크와 자동 제어 시스템을 설계·배포합니다.
+    온도, 습도, 광, 가스 센서와 지능형 피드백 컨트롤러를 결합한 실시간 모니터링
+    플랫폼을 개발하여 최소한의 인력으로 최적 재배 환경을 유지합니다.
   topics:
     - IoT Sensors
     - Feedback Control
@@ -57,13 +75,19 @@
 
 - id: data-driven
   title: "Data-driven Production Optimization"
+  title_ko: "데이터 기반 생산 최적화"
   tagline: "Modeling and analytics for yield improvement"
+  tagline_ko: "수확량 향상을 위한 모델링 및 분석"
   description: >
     We apply data science, machine learning, and statistical modeling to
     optimize plant production systems. By analyzing large-scale environmental
     and growth datasets, we build predictive models that guide decision-making
     for irrigation scheduling, nutrient management, harvest timing, and
     overall system design to improve yields and reduce waste.
+  description_ko: >
+    데이터 과학, 머신러닝, 통계 모델링을 적용하여 식물 생산 시스템을 최적화합니다.
+    대규모 환경·생장 데이터 분석을 통해 관수 일정, 양분 관리, 수확 시기, 시스템
+    설계 등의 의사결정을 지원하는 예측 모델을 구축하여 수확량을 높이고 낭비를 줄입니다.
   topics:
     - Machine Learning
     - Predictive Modeling
