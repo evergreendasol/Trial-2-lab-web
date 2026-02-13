@@ -17,11 +17,11 @@
       </a>
 
       <div class="nav__links">
-        <a href="{{ '/team' | relative_url }}">Team</a>
-        <a href="{{ '/research' | relative_url }}">Research</a>
-        <a href="{{ '/publications' | relative_url }}">Publications</a>
-        <a href="{{ '/gallery' | relative_url }}">Gallery</a>
-        <a href="{{ '/contact' | relative_url }}">Contact</a>
+        <a href="{{ '/team' | relative_url }}"{% if page.url == '/team' or page.url == '/team/' %} class="nav--active"{% endif %}>Team</a>
+        <a href="{{ '/research' | relative_url }}"{% if page.url == '/research' or page.url == '/research/' %} class="nav--active"{% endif %}>Research</a>
+        <a href="{{ '/publications' | relative_url }}"{% if page.url == '/publications' or page.url == '/publications/' %} class="nav--active"{% endif %}>Publications</a>
+        <a href="{{ '/gallery' | relative_url }}"{% if page.url == '/gallery' or page.url == '/gallery/' %} class="nav--active"{% endif %}>Gallery</a>
+        <a href="{{ '/contact' | relative_url }}"{% if page.url == '/contact' or page.url == '/contact/' %} class="nav--active"{% endif %}>Contact</a>
       </div>
     </div>
   </nav>
