@@ -1,0 +1,160 @@
+<!-- ===== CAROUSEL ===== -->
+<section class="carousel-section">
+  <div class="container">
+    <div class="carousel" aria-label="Image carousel" role="region">
+
+      <!-- Slide track -->
+      <div class="carousel__track">
+        {% for slide in site.data.carousel %}
+        <div class="carousel__slide{% if forloop.first %} carousel__slide--active{% endif %}"
+             data-index="{{ forloop.index0 }}">
+          <img class="carousel__img"
+               src="{{ slide.src | relative_url }}"
+               alt="{{ slide.title | escape }}"
+               loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+          {% if slide.title or slide.caption %}
+          <div class="carousel__caption">
+            {% if slide.title %}<h3 class="carousel__title">{{ slide.title }}</h3>{% endif %}
+            {% if slide.caption %}<p class="carousel__text muted">{{ slide.caption }}</p>{% endif %}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Navigation arrows -->
+      <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Previous slide">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <button class="carousel__btn carousel__btn--next" type="button" aria-label="Next slide">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 6 15 12 9 18"/>
+        </svg>
+      </button>
+
+      <!-- Dot indicators -->
+      <div class="carousel__dots" role="tablist" aria-label="Slide indicators">
+        {% for slide in site.data.carousel %}
+        <button class="carousel__dot{% if forloop.first %} carousel__dot--active{% endif %}"
+                type="button"
+                role="tab"
+                aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                aria-label="Go to slide {{ forloop.index }}"
+                data-slide="{{ forloop.index0 }}">
+        </button>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(() => {
+  const track = document.querySelector('.carousel__track');
+  if (!track) return;
+
+  const slides = Array.from(track.querySelectorAll('.carousel__slide'));
+  const dots   = Array.from(document.querySelectorAll('.carousel__dot'));
+  const prevBtn = document.querySelector('.carousel__btn--prev');
+  const nextBtn = document.querySelector('.carousel__btn--next');
+  const total  = slides.length;
+
+  if (total <= 1) return;
+
+  let current = 0;
+  let autoplayTimer = null;
+  const AUTOPLAY_MS = 5000;
+
+  /* ===== Core navigation ===== */
+  function goTo(index) {
+    if (index < 0) index = total - 1;
+    if (index >= total) index = 0;
+
+    slides[current].classList.remove('carousel__slide--active');
+    slides[index].classList.add('carousel__slide--active');
+
+    dots[current].classList.remove('carousel__dot--active');
+    dots[current].setAttribute('aria-selected', 'false');
+    dots[index].classList.add('carousel__dot--active');
+    dots[index].setAttribute('aria-selected', 'true');
+
+    current = index;
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  /* ===== Autoplay ===== */
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(next, AUTOPLAY_MS);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  function restartAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setTimeout(() => {
+      autoplayTimer = setInterval(next, AUTOPLAY_MS);
+    }, AUTOPLAY_MS);
+  }
+
+  /* ===== Button handlers ===== */
+  prevBtn.addEventListener('click', () => { prev(); restartAutoplay(); });
+  nextBtn.addEventListener('click', () => { next(); restartAutoplay(); });
+
+  /* ===== Dot handlers ===== */
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(parseInt(dot.dataset.slide, 10));
+      restartAutoplay();
+    });
+  });
+
+  /* ===== Keyboard navigation ===== */
+  document.querySelector('.carousel').addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  { prev(); restartAutoplay(); }
+    if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
+  });
+
+  /* ===== Touch / swipe ===== */
+  let touchStartX = 0;
+  let touchEndX   = 0;
+  const MIN_SWIPE = 50;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) >= MIN_SWIPE) {
+      if (diff > 0) next(); else prev();
+      restartAutoplay();
+    }
+  }, { passive: true });
+
+  /* ===== Pause when tab hidden ===== */
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopAutoplay();
+    else startAutoplay();
+  });
+
+  /* ===== Pause on hover ===== */
+  const carousel = document.querySelector('.carousel');
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+
+  /* ===== Init ===== */
+  startAutoplay();
+})();
+</script>

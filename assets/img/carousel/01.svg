@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#0f172a"/>
+  <rect x="60" y="60" width="1480" height="780" rx="40" fill="url(#g1)" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
+  <text x="120" y="200" fill="rgba(255,255,255,0.90)" font-size="80" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800">CAROUSEL</text>
+  <text x="120" y="310" fill="rgba(255,255,255,0.65)" font-size="40" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial">SLIDE 01 — Smart Greenhouse</text>
+  <text x="120" y="780" fill="rgba(255,255,255,0.50)" font-size="26" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial">Replace with a real photo (recommended: 1600×900)</text>
+</svg>

@@ -1,0 +1,11 @@
+- src: "/assets/img/carousel/01.svg"
+  title: "Smart Greenhouse Research"
+  caption: "Advanced environmental control systems for optimized plant growth"
+
+- src: "/assets/img/carousel/02.svg"
+  title: "Plant Factory Innovation"
+  caption: "Next-generation vertical farming and controlled environment agriculture"
+
+- src: "/assets/img/carousel/03.svg"
+  title: "Data-Driven Agriculture"
+  caption: "Leveraging AI and sensor networks for precision horticulture"
