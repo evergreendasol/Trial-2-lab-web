@@ -980,14 +980,6 @@ a:hover{color:var(--accent)}
   margin:6px 0 0;
 }
 
-.gallery-pagination{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  margin-top:24px;
-  flex-wrap:wrap;
-}
-
 /* =========================
    MODAL
    ========================= */
