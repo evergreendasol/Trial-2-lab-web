@@ -71,7 +71,7 @@ title: Gallery
   const pager = document.querySelector('.gallery-pagination');
   const cards = Array.from(document.querySelectorAll('.gallery-card'));
 
-  const perPage = 6;
+  const perPage = 9;
   const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
 
   function showPage(page) {
