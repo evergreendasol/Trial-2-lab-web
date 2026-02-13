@@ -63,7 +63,7 @@ a:hover{color:var(--accent)}
   top:0;
   z-index:10;
   background:var(--dark);
-  border-bottom:1px solid var(--darkLine);
+  border-bottom:2px solid var(--accent2);
 }
 
 .nav__inner{
@@ -430,7 +430,7 @@ a:hover{color:var(--accent)}
    ========================= */
 .footer{
   background:var(--dark);
-  border-top:none;
+  border-top:2px solid var(--accent2);
   padding:36px 0 22px;
   color:rgba(255,255,255,.78);
 }
