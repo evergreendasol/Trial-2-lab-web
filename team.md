@@ -11,7 +11,7 @@ title: Team
 {% assign alumni_count = site.data.team.alumni | size %}
 
 <!-- ===== HERO + SUMMARY CARDS ===== -->
-<section class="hero hero--photo team-hero">
+<section class="hero hero--photo hero--sub team-hero">
   <div class="container hero__inner">
     <p class="pill">GHPF Lab</p>
     <h1>Our Team</h1>

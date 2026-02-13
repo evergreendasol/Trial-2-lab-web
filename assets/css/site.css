@@ -64,7 +64,7 @@ a:hover{color:var(--accent)}
   top:0;
   z-index:10;
   background:var(--dark);
-  border-bottom:2px solid var(--accent2);
+  border-bottom:1px solid var(--darkLine);
 }
 
 .nav__inner{
@@ -90,7 +90,7 @@ a:hover{color:var(--accent)}
 .nav__links a:hover{color:#fff}
 .nav__links a.nav--active{
   color:#fff;
-  border-bottom:2px solid var(--accent2);
+  border-bottom:2px solid #fff;
   padding-bottom:4px;
 }
 
@@ -186,6 +186,14 @@ a:hover{color:var(--accent)}
     radial-gradient(900px 420px at 18% 10%, rgba(20,184,166,.28), transparent 60%),
     radial-gradient(800px 420px at 80% 20%, rgba(15,118,110,.22), transparent 55%),
     linear-gradient(180deg, var(--dark) 0%, var(--dark2) 100%);
+}
+
+/* Sub-page hero: slate-blue tone (Team, Research) */
+.hero--sub{
+  background:
+    radial-gradient(600px 300px at 75% 20%, rgba(100,116,139,.22), transparent 55%),
+    radial-gradient(500px 300px at 20% 40%, rgba(15,118,110,.12), transparent 50%),
+    linear-gradient(160deg, #1a2332 0%, #0f1f1e 100%);
 }
 
 /* 미세 그리드 패턴(줄무늬X) */
@@ -571,7 +579,7 @@ a:hover{color:var(--accent)}
    ========================= */
 .footer{
   background:var(--dark);
-  border-top:2px solid var(--accent2);
+  border-top:1px solid var(--darkLine);
   padding:36px 0 22px;
   color:rgba(255,255,255,.78);
 }
