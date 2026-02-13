@@ -4,7 +4,7 @@ title: Research
 ---
 
 <!-- ===== HERO BANNER + AREA CARDS ===== -->
-<section class="hero hero--photo hero--sub research-hero">
+<section class="hero hero--sub research-hero">
   <div class="container hero__inner">
     <p class="pill">GHPF Lab</p>
     <h1>Our Research</h1>
