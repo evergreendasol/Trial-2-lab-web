@@ -1096,6 +1096,8 @@ a:hover{color:var(--accent)}
   .nav__links::-webkit-scrollbar{display:none}
   .nav__links a{margin-left:12px;font-size:13px;white-space:nowrap}
   .brand{font-size:18px}
+  .theme-toggle{width:32px;height:32px;margin-left:10px}
+  .theme-toggle svg{width:16px;height:16px}
   .carousel-section{ padding:20px 0; }
   .carousel__track{ max-height:260px; }
   .carousel__btn{ width:32px; height:32px; }
@@ -1612,171 +1614,127 @@ a:hover{color:var(--accent)}
 }
 
 /* =========================
+   DARK MODE TOGGLE
+   ========================= */
+.theme-toggle{
+  background:none;
+  border:1.5px solid rgba(255,255,255,.25);
+  border-radius:8px;
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:rgba(255,255,255,.78);
+  margin-left:14px;
+  padding:0;
+  flex-shrink:0;
+  transition:border-color .2s, color .2s;
+}
+.theme-toggle:hover{
+  border-color:rgba(255,255,255,.5);
+  color:#fff;
+}
+.theme-toggle svg{
+  width:18px;
+  height:18px;
+}
+/* hide the icon that doesn't match current theme */
+.theme-toggle .icon-moon{ display:block }
+.theme-toggle .icon-sun{ display:none }
+[data-theme="dark"] .theme-toggle .icon-moon{ display:none }
+[data-theme="dark"] .theme-toggle .icon-sun{ display:block }
+
+/* =========================
    DARK MODE
    ========================= */
-@media (prefers-color-scheme:dark){
-  :root{
-    --bg:#0f1f1e;
-    --bg2:#132926;
-
-    --text:#e8f0ef;
-    --muted:rgba(232,240,239,.55);
-    --line:rgba(232,240,239,.12);
-
-    --panel:#162c2a;
-    --panel2:#1a3634;
-
-    --accent:#5eead4;
-    --accent2:#fbbf24;
-    --accent3:#e8f0ef;
-
-    --navbg:rgba(15,31,30,.95);
-
-    --dark:#0a1514;
-    --dark2:#0f1f1e;
-    --darkLine:rgba(255,255,255,.08);
-  }
-
-  body{
-    color-scheme:dark;
-  }
-
-  /* Nav: darken further in dark mode */
-  .nav{
-    background:var(--dark);
-  }
-
-  /* Cards: subtle border glow */
-  .card:hover{
-    border-color:rgba(94,234,212,.25);
-    box-shadow:0 8px 22px rgba(0,0,0,.25);
-  }
-
-  /* Badges */
-  .badge{
-    background:var(--panel2);
-    border-color:var(--line);
-    color:rgba(232,240,239,.7);
-  }
-
-  /* Gallery modal backdrop */
-  .gallery-modal::backdrop{
-    background:rgba(0,0,0,.6);
-  }
-
-  /* Carousel buttons */
-  .carousel__btn{
-    background:rgba(0,0,0,.65);
-    color:#fff;
-  }
-  .carousel__btn:hover{
-    background:rgba(0,0,0,.85);
-  }
-
-  /* Gallery pagination active */
-  .gallery-pagination__active{
-    border-color:var(--accent) !important;
-    color:var(--accent);
-  }
-
-  /* Team cards */
-  .team-summary-card,
-  .team-summary-card--hero{
-    background:var(--panel);
-    border-color:var(--line);
-    color:var(--text);
-  }
-  .team-summary-card:hover,
-  .team-summary-card--hero:hover{
-    box-shadow:0 8px 24px rgba(0,0,0,.3);
-    color:var(--text);
-  }
-
-  /* Professor card */
-  .prof-card{
-    background:var(--panel);
-    border-color:var(--line);
-  }
-  .prof-card__name{color:var(--text)}
-
-  /* Research cards */
-  .research-card,
-  .research-card--hero{
-    background:var(--panel);
-    border-color:var(--line);
-    color:var(--text);
-  }
-  .research-card:hover,
-  .research-card--hero:hover{
-    box-shadow:0 12px 32px rgba(0,0,0,.3);
-    color:var(--text);
-  }
-  .research-imgcard{
-    background:var(--panel);
-    border-color:var(--line);
-  }
-  .research-imgcard:hover{
-    box-shadow:0 12px 36px rgba(0,0,0,.3);
-  }
-  .research-imgcard__title{color:var(--text)}
-
-  /* Publication cards */
-  .pub-card{
-    background:var(--panel);
-    border-color:var(--line);
-  }
-
-  /* Join / Contact */
-  .join-card{
-    background:var(--panel);
-    border-color:var(--line);
-  }
-  .join-card:hover{
-    box-shadow:0 8px 30px rgba(0,0,0,.25);
-  }
-  .join-card__title{color:var(--text)}
-
-  .join-info__email-btn{
-    background:var(--accent);
-    color:var(--dark);
-  }
-  .join-info__email-btn:hover{
-    background:#99f6e4;
-    color:var(--dark);
-  }
-
-  /* Map */
-  .join-info__map{
-    border-color:var(--line);
-  }
-
-  /* Gallery modal */
-  .gallery-modal__inner{
-    background:var(--panel);
-    border-color:var(--line);
-  }
-
-  /* Carousel */
-  .carousel{
-    border-color:var(--line);
-    background:var(--panel);
-  }
-
-  /* Focus outlines for dark */
-  :focus-visible{
-    outline-color:var(--accent);
-  }
-  .nav__links a:focus-visible{
-    outline-color:rgba(94,234,212,.8);
-  }
-
-  /* Images: slightly brighten SVG placeholders */
-  .gallery-img,
-  .carousel__img,
-  .research-imgcard__visual img{
-    opacity:.9;
-  }
+[data-theme="dark"]{
+  --bg:#0f1f1e;
+  --bg2:#132926;
+  --text:#e8f0ef;
+  --muted:rgba(232,240,239,.55);
+  --line:rgba(232,240,239,.12);
+  --panel:#162c2a;
+  --panel2:#1a3634;
+  --accent:#5eead4;
+  --accent2:#fbbf24;
+  --accent3:#e8f0ef;
+  --navbg:rgba(15,31,30,.95);
+  --dark:#0a1514;
+  --dark2:#0f1f1e;
+  --darkLine:rgba(255,255,255,.08);
+  color-scheme:dark;
 }
+
+[data-theme="dark"] .nav{background:var(--dark)}
+
+[data-theme="dark"] .card:hover{
+  border-color:rgba(94,234,212,.25);
+  box-shadow:0 8px 22px rgba(0,0,0,.25);
+}
+
+[data-theme="dark"] .badge{
+  background:var(--panel2);
+  border-color:var(--line);
+  color:rgba(232,240,239,.7);
+}
+
+[data-theme="dark"] .gallery-modal::backdrop{background:rgba(0,0,0,.6)}
+
+[data-theme="dark"] .carousel__btn{background:rgba(0,0,0,.65);color:#fff}
+[data-theme="dark"] .carousel__btn:hover{background:rgba(0,0,0,.85)}
+
+[data-theme="dark"] .gallery-pagination__active{
+  border-color:var(--accent) !important;
+  color:var(--accent);
+}
+
+[data-theme="dark"] .team-summary-card,
+[data-theme="dark"] .team-summary-card--hero{
+  background:var(--panel);border-color:var(--line);color:var(--text);
+}
+[data-theme="dark"] .team-summary-card:hover,
+[data-theme="dark"] .team-summary-card--hero:hover{
+  box-shadow:0 8px 24px rgba(0,0,0,.3);color:var(--text);
+}
+
+[data-theme="dark"] .prof-card{background:var(--panel);border-color:var(--line)}
+[data-theme="dark"] .prof-card__name{color:var(--text)}
+
+[data-theme="dark"] .research-card,
+[data-theme="dark"] .research-card--hero{
+  background:var(--panel);border-color:var(--line);color:var(--text);
+}
+[data-theme="dark"] .research-card:hover,
+[data-theme="dark"] .research-card--hero:hover{
+  box-shadow:0 12px 32px rgba(0,0,0,.3);color:var(--text);
+}
+[data-theme="dark"] .research-imgcard{background:var(--panel);border-color:var(--line)}
+[data-theme="dark"] .research-imgcard:hover{box-shadow:0 12px 36px rgba(0,0,0,.3)}
+[data-theme="dark"] .research-imgcard__title{color:var(--text)}
+
+[data-theme="dark"] .pub-card{background:var(--panel);border-color:var(--line)}
+
+[data-theme="dark"] .join-card{background:var(--panel);border-color:var(--line)}
+[data-theme="dark"] .join-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.25)}
+[data-theme="dark"] .join-card__title{color:var(--text)}
+
+[data-theme="dark"] .join-info__email-btn{background:var(--accent);color:var(--dark)}
+[data-theme="dark"] .join-info__email-btn:hover{background:#99f6e4;color:var(--dark)}
+
+[data-theme="dark"] .join-info__map{border-color:var(--line)}
+
+[data-theme="dark"] .gallery-modal__inner{background:var(--panel);border-color:var(--line)}
+
+[data-theme="dark"] .carousel{border-color:var(--line);background:var(--panel)}
+
+[data-theme="dark"] :focus-visible{outline-color:var(--accent)}
+[data-theme="dark"] .nav__links a:focus-visible{outline-color:rgba(94,234,212,.8)}
+
+[data-theme="dark"] .gallery-img,
+[data-theme="dark"] .carousel__img,
+[data-theme="dark"] .research-imgcard__visual img{opacity:.9}
 
 /* =========================
    PRINT STYLES
