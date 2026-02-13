@@ -1098,6 +1098,7 @@ a:hover{color:var(--accent)}
   .brand{font-size:18px}
   .theme-toggle{width:32px;height:32px;margin-left:10px}
   .theme-toggle svg{width:16px;height:16px}
+  .lang-toggle{height:32px;font-size:11px;padding:0 8px;margin-left:6px}
   .carousel-section{ padding:20px 0; }
   .carousel__track{ max-height:260px; }
   .carousel__btn{ width:32px; height:32px; }
@@ -1612,6 +1613,35 @@ a:hover{color:var(--accent)}
     scroll-behavior:auto !important;
   }
 }
+
+/* =========================
+   LANGUAGE TOGGLE
+   ========================= */
+.lang-toggle{
+  background:none;
+  border:1.5px solid rgba(255,255,255,.25);
+  border-radius:8px;
+  padding:0 10px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  color:rgba(255,255,255,.78);
+  margin-left:8px;
+  flex-shrink:0;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.03em;
+  transition:border-color .2s, color .2s;
+}
+.lang-toggle:hover{
+  border-color:rgba(255,255,255,.5);
+  color:#fff;
+}
+
+/* Language visibility */
+[data-lang="en"] .i18n-ko{ display:none !important }
+[data-lang="ko"] .i18n-en{ display:none !important }
 
 /* =========================
    DARK MODE TOGGLE

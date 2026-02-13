@@ -3,23 +3,23 @@
 
   <div class="container hero__inner">
     {% if include.pill %}
-    <p class="pill">{{ include.pill }}</p>
+    <p class="pill"><span class="i18n-en">{{ include.pill }}</span><span class="i18n-ko">{{ include.pill_ko | default: include.pill }}</span></p>
     {% endif %}
 
-    <h1>{{ include.title }}</h1>
+    <h1><span class="i18n-en">{{ include.title }}</span><span class="i18n-ko">{{ include.title_ko | default: include.title }}</span></h1>
 
     {% if include.subtitle %}
-    <p class="lead">{{ include.subtitle }}</p>
+    <p class="lead"><span class="i18n-en">{{ include.subtitle }}</span><span class="i18n-ko">{{ include.subtitle_ko | default: include.subtitle }}</span></p>
     {% endif %}
 
     {% if include.primary_text %}
     <div class="hero__cta">
       <a class="btn btn--outline" href="{{ include.primary_link | relative_url }}">
-        {{ include.primary_text }}
+        <span class="i18n-en">{{ include.primary_text }}</span><span class="i18n-ko">{{ include.primary_text_ko | default: include.primary_text }}</span>
       </a>
       {% if include.secondary_text %}
       <a class="btn btn--outline" href="{{ include.secondary_link | relative_url }}">
-        {{ include.secondary_text }}
+        <span class="i18n-en">{{ include.secondary_text }}</span><span class="i18n-ko">{{ include.secondary_text_ko | default: include.secondary_text }}</span>
       </a>
       {% endif %}
     </div>
@@ -27,7 +27,7 @@
   </div>
 
   <a class="hero__scroll" href="#main-content" aria-label="Scroll down">
-    <span class="hero__scroll-label">Learn More</span>
+    <span class="hero__scroll-label"><span class="i18n-en">Learn More</span><span class="i18n-ko">더 알아보기</span></span>
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="6 9 12 15 18 9"/>
     </svg>

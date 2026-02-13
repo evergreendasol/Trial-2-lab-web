@@ -1,20 +1,27 @@
 faculty:
   - name: 안태인
     role: Associate Professor
+    role_ko: 부교수
     email: tiahn@snu.ac.kr
     photo: assets/img/team/ahn-taein.svg
     education:
       - degree: Ph.D.
         field: Horticultural Science
+        field_ko: 원예과학
         university: Seoul National University
+        university_ko: 서울대학교
         year: 2018
       - degree: M.S.
         field: Horticultural Science
+        field_ko: 원예과학
         university: Seoul National University
+        university_ko: 서울대학교
         year: 2014
       - degree: B.S.
         field: Plant Science
+        field_ko: 식물과학
         university: Seoul National University
+        university_ko: 서울대학교
         year: 2012
 
 phd:
@@ -57,6 +64,7 @@ phd_students:
 ms_students:
   - name: 김수진
     note: "Email not available"
+    note_ko: "이메일 미제공"
     photo: assets/img/team/kim-sujin.svg
   - name: 한민희
     email: 109vv@snu.ac.kr

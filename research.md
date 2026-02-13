@@ -7,12 +7,11 @@ title: Research
 
 <section class="section">
   <div class="section__head">
-    <h1 class="page-title">Research</h1>
-    <p class="muted small">Our research areas and focus topics</p>
+    <h1 class="page-title"><span class="i18n-en">Research</span><span class="i18n-ko">연구</span></h1>
+    <p class="muted small"><span class="i18n-en">Our research areas and focus topics</span><span class="i18n-ko">연구 분야 및 주요 주제</span></p>
   </div>
 </section>
 
-<!-- ===== DETAIL SECTIONS (2×2 image cards) ===== -->
 <div class="research-cards-grid">
 {% for area in site.data.research %}
 <div class="research-imgcard" id="{{ area.id }}" style="--card-accent:{{ area.color }}">
@@ -33,9 +32,9 @@ title: Research
   </div>
   {% endif %}
   <div class="research-imgcard__body">
-    <p class="research-imgcard__tagline">{{ area.tagline }}</p>
-    <h2 class="research-imgcard__title">{{ area.title }}</h2>
-    <p class="research-imgcard__desc">{{ area.description }}</p>
+    <p class="research-imgcard__tagline"><span class="i18n-en">{{ area.tagline }}</span><span class="i18n-ko">{{ area.tagline_ko | default: area.tagline }}</span></p>
+    <h2 class="research-imgcard__title"><span class="i18n-en">{{ area.title }}</span><span class="i18n-ko">{{ area.title_ko | default: area.title }}</span></h2>
+    <p class="research-imgcard__desc"><span class="i18n-en">{{ area.description }}</span><span class="i18n-ko">{{ area.description_ko | default: area.description }}</span></p>
     <div class="research-imgcard__topics">
       {% for topic in area.topics %}
       <span class="badge research-badge">{{ topic }}</span>

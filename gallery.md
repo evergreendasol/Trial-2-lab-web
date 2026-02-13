@@ -7,8 +7,8 @@ title: Gallery
 
 <section class="section">
   <div class="section__head">
-    <h1 class="page-title">Gallery</h1>
-    <p class="muted small">Research scenes, facilities, and lab activities</p>
+    <h1 class="page-title"><span class="i18n-en">Gallery</span><span class="i18n-ko">갤러리</span></h1>
+    <p class="muted small"><span class="i18n-en">Research scenes, facilities, and lab activities</span><span class="i18n-ko">연구 현장, 시설 및 연구실 활동</span></p>
   </div>
 </section>
 
@@ -19,17 +19,19 @@ title: Gallery
         <button class="gallery-btn" type="button"
           data-src="{{ item.src | relative_url }}"
           data-title="{{ item.title | escape }}"
+          data-title-ko="{{ item.title_ko | default: item.title | escape }}"
           data-caption="{{ item.caption | escape }}"
+          data-caption-ko="{{ item.caption_ko | default: item.caption | escape }}"
           aria-label="Open image: {{ item.title | escape }}">
           <img class="gallery-img" src="{{ item.src | relative_url }}" alt="{{ item.title | escape }}" loading="lazy">
         </button>
 
         <figcaption class="gallery-cap">
           <div class="person__top">
-            <h3 class="gallery-title">{{ item.title }}</h3>
-            {% if item.tag %}<span class="badge person__role">{{ item.tag }}</span>{% endif %}
+            <h3 class="gallery-title"><span class="i18n-en">{{ item.title }}</span><span class="i18n-ko">{{ item.title_ko | default: item.title }}</span></h3>
+            {% if item.tag %}<span class="badge person__role"><span class="i18n-en">{{ item.tag }}</span><span class="i18n-ko">{{ item.tag_ko | default: item.tag }}</span></span>{% endif %}
           </div>
-          {% if item.caption %}<p class="muted small gallery-sub">{{ item.caption }}</p>{% endif %}
+          {% if item.caption %}<p class="muted small gallery-sub"><span class="i18n-en">{{ item.caption }}</span><span class="i18n-ko">{{ item.caption_ko | default: item.caption }}</span></p>{% endif %}
         </figcaption>
       </figure>
     {% endfor %}
@@ -44,11 +46,11 @@ title: Gallery
   <div class="gallery-modal__inner card">
     <div class="gallery-modal__top">
       <div>
-        <p class="pill" id="gmTag">Gallery</p>
+        <p class="pill" id="gmTag"><span class="i18n-en">Gallery</span><span class="i18n-ko">갤러리</span></p>
         <h2 id="gmTitle" style="margin:0; font-size:22px;">Title</h2>
         <p class="muted small" id="gmCaption" style="margin:8px 0 0;">Caption</p>
       </div>
-      <button class="btn btn--ghost" type="button" id="gmClose">Close</button>
+      <button class="btn btn--ghost" type="button" id="gmClose"><span class="i18n-en">Close</span><span class="i18n-ko">닫기</span></button>
     </div>
 
     <div class="gallery-modal__imgwrap">
@@ -114,20 +116,24 @@ title: Gallery
     grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // Modal
+  // Modal with language support
+  function getLang() {
+    return document.documentElement.getAttribute('data-lang') || 'en';
+  }
+
   document.querySelectorAll('.gallery-btn').forEach(b => {
     b.addEventListener('click', () => {
+      const lang = getLang();
       gmImg.src = b.dataset.src;
-      gmImg.alt = b.dataset.title || 'Gallery image';
-      gmTitle.textContent = b.dataset.title || '';
-      gmCaption.textContent = b.dataset.caption || '';
+      gmImg.alt = (lang === 'ko' ? b.dataset.titleKo : b.dataset.title) || 'Gallery image';
+      gmTitle.textContent = (lang === 'ko' ? b.dataset.titleKo : b.dataset.title) || '';
+      gmCaption.textContent = (lang === 'ko' ? b.dataset.captionKo : b.dataset.caption) || '';
       modal.showModal();
     });
   });
   gmClose.addEventListener('click', () => modal.close());
   modal.addEventListener('click', (e) => { if (e.target === modal) modal.close(); });
 
-  // Init
   showPage(1);
 })();
 </script>

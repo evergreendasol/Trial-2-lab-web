@@ -1,11 +1,17 @@
 - src: "/assets/img/carousel/01.svg"
   title: "Smart Greenhouse Research"
+  title_ko: "스마트 온실 연구"
   caption: "Advanced environmental control systems for optimized plant growth"
+  caption_ko: "최적 식물 생장을 위한 첨단 환경 제어 시스템"
 
 - src: "/assets/img/carousel/02.svg"
   title: "Plant Factory Innovation"
+  title_ko: "식물공장 혁신"
   caption: "Next-generation vertical farming and controlled environment agriculture"
+  caption_ko: "차세대 수직농업과 시설원예"
 
 - src: "/assets/img/carousel/03.svg"
   title: "Data-Driven Agriculture"
+  title_ko: "데이터 기반 농업"
   caption: "Leveraging AI and sensor networks for precision horticulture"
+  caption_ko: "AI와 센서 네트워크를 활용한 정밀 원예"

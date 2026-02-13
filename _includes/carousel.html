@@ -2,7 +2,7 @@
 <section class="carousel-section">
   <div class="container">
     <div class="section__head">
-      <h2>Research Topics</h2>
+      <h2><span class="i18n-en">Research Topics</span><span class="i18n-ko">연구 주제</span></h2>
     </div>
     <div class="carousel" aria-label="Image carousel" role="region">
 
@@ -17,8 +17,8 @@
                loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
           {% if slide.title or slide.caption %}
           <div class="carousel__caption">
-            {% if slide.title %}<h3 class="carousel__title">{{ slide.title }}</h3>{% endif %}
-            {% if slide.caption %}<p class="carousel__text muted">{{ slide.caption }}</p>{% endif %}
+            {% if slide.title %}<h3 class="carousel__title"><span class="i18n-en">{{ slide.title }}</span><span class="i18n-ko">{{ slide.title_ko | default: slide.title }}</span></h3>{% endif %}
+            {% if slide.caption %}<p class="carousel__text muted"><span class="i18n-en">{{ slide.caption }}</span><span class="i18n-ko">{{ slide.caption_ko | default: slide.caption }}</span></p>{% endif %}
           </div>
           {% endif %}
         </div>
@@ -71,93 +71,50 @@
   let autoplayTimer = null;
   const AUTOPLAY_MS = 5000;
 
-  /* ===== Core navigation ===== */
   function goTo(index) {
     if (index < 0) index = total - 1;
     if (index >= total) index = 0;
-
     slides[current].classList.remove('carousel__slide--active');
     slides[index].classList.add('carousel__slide--active');
-
     dots[current].classList.remove('carousel__dot--active');
     dots[current].setAttribute('aria-selected', 'false');
     dots[index].classList.add('carousel__dot--active');
     dots[index].setAttribute('aria-selected', 'true');
-
     current = index;
   }
 
   function next() { goTo(current + 1); }
   function prev() { goTo(current - 1); }
 
-  /* ===== Autoplay ===== */
-  function startAutoplay() {
-    stopAutoplay();
-    autoplayTimer = setInterval(next, AUTOPLAY_MS);
-  }
+  function startAutoplay() { stopAutoplay(); autoplayTimer = setInterval(next, AUTOPLAY_MS); }
+  function stopAutoplay() { if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; } }
+  function restartAutoplay() { stopAutoplay(); autoplayTimer = setTimeout(() => { autoplayTimer = setInterval(next, AUTOPLAY_MS); }, AUTOPLAY_MS); }
 
-  function stopAutoplay() {
-    if (autoplayTimer) {
-      clearInterval(autoplayTimer);
-      autoplayTimer = null;
-    }
-  }
-
-  function restartAutoplay() {
-    stopAutoplay();
-    autoplayTimer = setTimeout(() => {
-      autoplayTimer = setInterval(next, AUTOPLAY_MS);
-    }, AUTOPLAY_MS);
-  }
-
-  /* ===== Button handlers ===== */
   prevBtn.addEventListener('click', () => { prev(); restartAutoplay(); });
   nextBtn.addEventListener('click', () => { next(); restartAutoplay(); });
 
-  /* ===== Dot handlers ===== */
   dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      goTo(parseInt(dot.dataset.slide, 10));
-      restartAutoplay();
-    });
+    dot.addEventListener('click', () => { goTo(parseInt(dot.dataset.slide, 10)); restartAutoplay(); });
   });
 
-  /* ===== Keyboard navigation ===== */
   document.querySelector('.carousel').addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft')  { prev(); restartAutoplay(); }
     if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
   });
 
-  /* ===== Touch / swipe ===== */
-  let touchStartX = 0;
-  let touchEndX   = 0;
+  let touchStartX = 0, touchEndX = 0;
   const MIN_SWIPE = 50;
-
-  track.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
+  track.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
   track.addEventListener('touchend', (e) => {
     touchEndX = e.changedTouches[0].screenX;
     const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) >= MIN_SWIPE) {
-      if (diff > 0) next(); else prev();
-      restartAutoplay();
-    }
+    if (Math.abs(diff) >= MIN_SWIPE) { if (diff > 0) next(); else prev(); restartAutoplay(); }
   }, { passive: true });
 
-  /* ===== Pause when tab hidden ===== */
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) stopAutoplay();
-    else startAutoplay();
-  });
-
-  /* ===== Pause on hover ===== */
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stopAutoplay(); else startAutoplay(); });
   const carousel = document.querySelector('.carousel');
   carousel.addEventListener('mouseenter', stopAutoplay);
   carousel.addEventListener('mouseleave', startAutoplay);
-
-  /* ===== Init ===== */
   startAutoplay();
 })();
 </script>
