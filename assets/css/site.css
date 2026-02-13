@@ -94,6 +94,24 @@ a:hover{color:var(--accent)}
   padding-bottom:4px;
 }
 
+/* --- Home: transparent nav over hero --- */
+.home .nav{
+  position:absolute;
+  width:100%;
+  background:transparent;
+}
+
+.home .nav__links .btn--primary{
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(255,255,255,.45);
+  color:#fff;
+}
+
+.home .nav__links .btn--primary:hover{
+  background:rgba(255,255,255,.22);
+  border-color:rgba(255,255,255,.7);
+}
+
 /* =========================
    BUTTONS
    ========================= */
