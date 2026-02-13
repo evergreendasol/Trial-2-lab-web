@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1a3a2a"/>
-      <stop offset="60%" stop-color="#1e4d35"/>
-      <stop offset="100%" stop-color="#1a3a2a"/>
+      <stop offset="0%" stop-color="#2a6e4e"/>
+      <stop offset="60%" stop-color="#3a8c65"/>
+      <stop offset="100%" stop-color="#2a6e4e"/>
     </linearGradient>
     <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#2d7a5a" stop-opacity=".25"/>
       <stop offset="100%" stop-color="#1e5c40" stop-opacity=".18"/>
     </linearGradient>
     <linearGradient id="glow" x1=".5" y1="0" x2=".5" y2="1">
-      <stop offset="0%" stop-color="#4ade80" stop-opacity=".08"/>
+      <stop offset="0%" stop-color="#6ee7a0" stop-opacity=".18"/>
       <stop offset="100%" stop-color="transparent"/>
     </linearGradient>
   </defs>
@@ -19,7 +19,7 @@
   <!-- Subtle light rays -->
   <ellipse cx="960" cy="200" rx="900" ry="400" fill="url(#glow)"/>
   <!-- Greenhouse structure -->
-  <g opacity=".18" stroke="#4ade80" stroke-width="1.5" fill="none">
+  <g opacity=".3" stroke="#6ee7a0" stroke-width="1.5" fill="none">
     <!-- Main greenhouse frame -->
     <path d="M260 700 L960 280 L1660 700"/>
     <rect x="320" y="520" width="1280" height="360" rx="4"/>
@@ -38,7 +38,7 @@
     <line x1="1440" y1="520" x2="1440" y2="880"/>
   </g>
   <!-- Plants row 1 -->
-  <g opacity=".12" stroke="#4ade80" stroke-width="1.2" fill="none">
+  <g opacity=".22" stroke="#6ee7a0" stroke-width="1.2" fill="none">
     <circle cx="400" cy="780" r="30"/>
     <line x1="400" y1="810" x2="400" y2="860"/>
     <circle cx="560" cy="760" r="35"/>
@@ -57,7 +57,7 @@
     <line x1="1520" y1="798" x2="1520" y2="860"/>
   </g>
   <!-- Floating particles / data dots -->
-  <g fill="#4ade80" opacity=".06">
+  <g fill="#6ee7a0" opacity=".12">
     <circle cx="300" cy="400" r="3"/>
     <circle cx="580" cy="350" r="2"/>
     <circle cx="800" cy="450" r="4"/>

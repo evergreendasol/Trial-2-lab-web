@@ -208,7 +208,7 @@ a:hover{color:var(--accent)}
 .hero__overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(180deg, rgba(10,25,18,.65) 0%, rgba(10,25,18,.45) 50%, rgba(10,25,18,.7) 100%);
+  background:linear-gradient(180deg, rgba(10,30,20,.4) 0%, rgba(10,30,20,.22) 50%, rgba(10,30,20,.45) 100%);
   pointer-events:none;
 }
 
