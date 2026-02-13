@@ -15,6 +15,7 @@
     - Climate Engineering
   color: "#0f766e"
   icon: greenhouse
+  image: assets/img/research/cea.svg
 
 - id: plant-growth
   title: "Plant Growth & Physiology"
@@ -33,6 +34,7 @@
     - Environmental Stress
   color: "#059669"
   icon: plant
+  image: assets/img/research/plant-growth.svg
 
 - id: sensing
   title: "Environmental Sensing & Control"
@@ -51,6 +53,7 @@
     - Microclimate Management
   color: "#a16207"
   icon: sensor
+  image: assets/img/research/sensing.svg
 
 - id: data-driven
   title: "Data-driven Production Optimization"
@@ -69,3 +72,4 @@
     - Decision Support
   color: "#7c3aed"
   icon: data
+  image: assets/img/research/data-driven.svg
