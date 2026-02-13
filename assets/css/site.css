@@ -269,3 +269,107 @@ h1{
   }
 }
 
+
+/* =========================
+   TEAM (final override)
+   ========================= */
+
+/* 섹션 간 구분(너무 벌어지지 않게) */
+.team-section{
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.team-section:first-of-type{
+  margin-top:18px;
+  padding-top:0;
+  border-top:none;
+}
+
+/* 카드가 화면 전체로 늘어나지 않게: 고정 폭 column */
+.team-grid{
+  grid-template-columns: repeat(auto-fit, minmax(240px, 320px));
+  gap:14px;
+  margin-top:14px;
+  justify-content:start; /* 왼쪽 정렬 */
+}
+
+.team-card{
+  padding:14px;
+  max-width:320px;
+}
+
+/* 컴팩트 row 카드 */
+.person--compact{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* 깔끔한 아바타: 사진 있으면 사진, 없으면 TEMP */
+.avatar{
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  flex:0 0 auto;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.16);
+  background:
+    radial-gradient(18px 18px at 30% 30%, rgba(34,197,94,.20), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,.04) 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.avatar__txt{
+  font-weight:800;
+  letter-spacing:1px;
+  font-size:12px;
+  color:rgba(243,247,245,.85);
+}
+
+.person__meta{
+  min-width:0;
+}
+
+.person__top{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.person__name{
+  margin:0;
+  font-size:16px;
+  line-height:1.15;
+}
+
+.person__role{
+  font-size:11px;
+  padding:3px 8px;
+  opacity:.95;
+}
+
+.person__sub{
+  margin-top:4px;
+  line-height:1.35;
+}
+
+@media (max-width:900px){
+  .team-grid{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .team-card{
+    max-width:none;
+  }
+}
+

@@ -6,24 +6,19 @@ title: Team
 # Team
 
 {% comment %}
-avatar rules:
+Avatar rules:
 - if p.photo exists: show img
-- else: show initials from name (first 2 chars after removing spaces)
+- else: show TEMP text
 {% endcomment %}
-
-{% assign placeholder = "" %}
 
 {% capture section_card %}
   <div class="card team-card">
     <div class="person person--compact">
-      {% assign nm = p.name | default: "" | strip %}
-      {% assign initials = nm | replace: " ", "" | slice: 0, 2 %}
-
       <div class="avatar">
         {% if p.photo %}
           <img src="{{ p.photo | relative_url }}" alt="{{ p.name }}">
         {% else %}
-          <span class="avatar__txt">{{ initials | upcase }}</span>
+          <span class="avatar__txt">TEMP</span>
         {% endif %}
       </div>
 
