@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="author" content="{{ site.author | escape }}">
+  <meta name="color-scheme" content="light dark">
 
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body{% if page.url == '/' or page.url == '/index.html' %} class="home"{% endif %}>
 
+  <!-- Skip to main content -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <!-- NAVIGATION -->
-  <nav class="nav">
+  <nav class="nav" aria-label="Main navigation">
     <div class="container nav__inner">
       <a class="brand" href="{{ '/' | relative_url }}">
         {{ site.title }}
@@ -27,7 +33,7 @@
   </nav>
 
   <!-- PAGE CONTENT -->
-  <main>
+  <main id="main-content">
     {{ content }}
   </main>
 
