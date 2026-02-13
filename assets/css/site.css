@@ -1312,14 +1312,14 @@ a:hover{color:var(--accent)}
   display:flex;
   flex-wrap:wrap;
   gap:6px;
-  margin-bottom:12px;
+  margin:0 0 10px;
 }
 
 .pub-card__title{
   font-size:16px;
   font-weight:700;
   line-height:1.4;
-  margin:0 0 10px;
+  margin:0 0 8px;
 }
 
 .pub-card__authors{
