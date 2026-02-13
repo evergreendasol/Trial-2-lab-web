@@ -1,0 +1,71 @@
+- id: cea
+  title: "Controlled Environment Agriculture"
+  tagline: "Smart greenhouse and plant factory systems"
+  description: >
+    Our lab develops advanced controlled environment agriculture (CEA) systems
+    including smart greenhouses and vertical plant factories. We integrate
+    architectural design, climate engineering, and crop science to create
+    production environments that maximize resource efficiency while maintaining
+    optimal growing conditions year-round.
+  topics:
+    - Smart Greenhouses
+    - Plant Factories
+    - Vertical Farming
+    - Resource Efficiency
+    - Climate Engineering
+  color: "#0f766e"
+  icon: greenhouse
+
+- id: plant-growth
+  title: "Plant Growth & Physiology"
+  tagline: "Growth responses under environmental conditions"
+  description: >
+    We study plant physiological responses to environmental stimuli including
+    light quality and quantity, temperature regimes, CO₂ concentration, and
+    nutrient availability. Our research connects fundamental plant biology
+    with practical cultivation strategies to optimize growth, development,
+    and quality of horticultural crops.
+  topics:
+    - Photomorphogenesis
+    - Light Responses
+    - Crop Physiology
+    - Growth Modeling
+    - Environmental Stress
+  color: "#059669"
+  icon: plant
+
+- id: sensing
+  title: "Environmental Sensing & Control"
+  tagline: "Sensor integration and automated control systems"
+  description: >
+    Our team designs and deploys integrated sensor networks and automated
+    control systems for precision environment management. We develop real-time
+    monitoring platforms that combine temperature, humidity, light, and gas
+    sensors with intelligent feedback controllers to maintain ideal growing
+    conditions with minimal human intervention.
+  topics:
+    - IoT Sensors
+    - Feedback Control
+    - Real-time Monitoring
+    - Automation
+    - Microclimate Management
+  color: "#a16207"
+  icon: sensor
+
+- id: data-driven
+  title: "Data-driven Production Optimization"
+  tagline: "Modeling and analytics for yield improvement"
+  description: >
+    We apply data science, machine learning, and statistical modeling to
+    optimize plant production systems. By analyzing large-scale environmental
+    and growth datasets, we build predictive models that guide decision-making
+    for irrigation scheduling, nutrient management, harvest timing, and
+    overall system design to improve yields and reduce waste.
+  topics:
+    - Machine Learning
+    - Predictive Modeling
+    - Yield Optimization
+    - Data Analytics
+    - Decision Support
+  color: "#7c3aed"
+  icon: data
