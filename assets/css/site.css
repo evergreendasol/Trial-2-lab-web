@@ -64,7 +64,7 @@ a:hover{color:var(--accent)}
   top:0;
   z-index:10;
   background:var(--dark);
-  border-bottom:1px solid var(--darkLine);
+  border-bottom:none;
 }
 
 .nav__inner{
@@ -181,19 +181,31 @@ a:hover{color:var(--accent)}
 .hero--photo{
   position:relative;
   color:#fff;
-  border-bottom:1px solid var(--darkLine);
+  border-bottom:none;
   background:
     radial-gradient(900px 420px at 18% 10%, rgba(20,184,166,.28), transparent 60%),
     radial-gradient(800px 420px at 80% 20%, rgba(15,118,110,.22), transparent 55%),
     linear-gradient(180deg, var(--dark) 0%, var(--dark2) 100%);
 }
 
-/* Sub-page hero: slate-blue tone (Team, Research) */
+/* Sub-page hero: clean white (Team, Research) */
 .hero--sub{
-  background:
-    radial-gradient(600px 300px at 75% 20%, rgba(100,116,139,.22), transparent 55%),
-    radial-gradient(500px 300px at 20% 40%, rgba(15,118,110,.12), transparent 50%),
-    linear-gradient(160deg, #1a2332 0%, #0f1f1e 100%);
+  background:var(--bg);
+  color:var(--text);
+  border-bottom:1px solid var(--line);
+}
+
+.hero--sub::after{
+  display:none;
+}
+
+.hero--sub .pill{
+  color:var(--accent);
+}
+
+.hero--sub .lead{
+  color:var(--muted);
+  opacity:1;
 }
 
 /* 미세 그리드 패턴(줄무늬X) */
@@ -491,31 +503,17 @@ a:hover{color:var(--accent)}
 }
 
 .team-summary-card--hero{
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.12);
+  background:var(--panel);
+  border:1px solid var(--line);
   border-top:3px solid var(--card-accent);
-  backdrop-filter:blur(12px);
-  color:#fff;
+  color:var(--text);
 }
 
 .team-summary-card--hero:hover{
-  background:rgba(255,255,255,.12);
-  border-color:rgba(255,255,255,.22);
-  box-shadow:0 8px 24px rgba(0,0,0,.25);
-  color:#fff;
-}
-
-.team-summary-card--hero .team-summary-card__icon{
-  background:rgba(255,255,255,.10);
-  color:#fff;
-}
-
-.team-summary-card--hero .team-summary-card__count{
-  color:#fff;
-}
-
-.team-summary-card--hero .team-summary-card__label{
-  color:rgba(255,255,255,.65);
+  background:var(--panel);
+  border-color:var(--card-accent);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  color:var(--text);
 }
 
 .team-section{
@@ -771,33 +769,19 @@ a:hover{color:var(--accent)}
   color:var(--text);
 }
 
-/* --- Hero variant (glass on dark) --- */
+/* --- Hero variant (white bg, same as base card) --- */
 .research-card--hero{
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.12);
+  background:var(--panel);
+  border:1px solid var(--line);
   border-top:3px solid var(--card-accent, var(--accent));
-  backdrop-filter:blur(12px);
-  color:#fff;
+  color:var(--text);
 }
 
 .research-card--hero:hover{
-  background:rgba(255,255,255,.12);
-  border-color:rgba(255,255,255,.22);
-  box-shadow:0 12px 32px rgba(0,0,0,.25);
-  color:#fff;
-}
-
-.research-card--hero .research-card__icon{
-  background:rgba(255,255,255,.10);
-  color:#fff;
-}
-
-.research-card--hero .research-card__tagline{
-  color:rgba(255,255,255,.65);
-}
-
-.research-card--hero .research-card__arrow{
-  color:rgba(255,255,255,.5);
+  background:var(--panel);
+  border-color:var(--card-accent, var(--accent));
+  box-shadow:0 12px 32px rgba(0,0,0,.08);
+  color:var(--text);
 }
 
 .research-card__icon{
