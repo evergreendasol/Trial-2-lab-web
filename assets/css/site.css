@@ -94,6 +94,24 @@ a:hover{color:var(--accent)}
   padding-bottom:4px;
 }
 
+/* --- Home: transparent nav over hero --- */
+.home .nav{
+  position:absolute;
+  width:100%;
+  background:transparent;
+}
+
+.home .nav__links .btn--primary{
+  background:rgba(255,255,255,.12);
+  border:1.5px solid rgba(255,255,255,.45);
+  color:#fff;
+}
+
+.home .nav__links .btn--primary:hover{
+  background:rgba(255,255,255,.22);
+  border-color:rgba(255,255,255,.7);
+}
+
 /* =========================
    BUTTONS
    ========================= */
@@ -816,6 +834,68 @@ a:hover{color:var(--accent)}
 
 .team-card__info p{
   margin:2px 0;
+}
+
+/* =========================
+   NEWS (homepage)
+   ========================= */
+.news-section{
+  background:var(--bg2);
+}
+
+.news-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+}
+
+.news-item{
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.news-item:first-child{
+  padding-top:0;
+}
+
+.news-item:last-child{
+  border-bottom:none;
+  padding-bottom:0;
+}
+
+.news-item__date{
+  flex-shrink:0;
+  font-size:13px;
+  font-weight:600;
+  color:var(--accent);
+  min-width:110px;
+  padding-top:2px;
+}
+
+.news-item__title{
+  margin:0 0 4px;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.35;
+}
+
+.news-item__summary{
+  margin:0;
+  font-size:14px;
+  line-height:1.6;
+}
+
+@media (max-width:600px){
+  .news-item{
+    flex-direction:column;
+    gap:4px;
+  }
+  .news-item__date{
+    min-width:auto;
+  }
 }
 
 /* =========================
