@@ -1,7 +1,21 @@
 faculty:
   - name: 안태인
+    role: Associate Professor
     email: tiahn@snu.ac.kr
     photo: assets/img/team/ahn-taein.svg
+    education:
+      - degree: Ph.D.
+        field: Horticultural Science
+        university: Seoul National University
+        year: 2018
+      - degree: M.S.
+        field: Horticultural Science
+        university: Seoul National University
+        year: 2014
+      - degree: B.S.
+        field: Plant Science
+        university: Seoul National University
+        year: 2012
 
 phd:
   - name: 황인하

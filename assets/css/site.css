@@ -516,6 +516,145 @@ a:hover{color:var(--accent)}
   color:var(--text);
 }
 
+/* --- Professor featured card --- */
+.prof-card{
+  display:flex;
+  gap:36px;
+  align-items:flex-start;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:32px;
+  margin-top:18px;
+}
+
+.prof-card__photo{
+  flex-shrink:0;
+  width:160px;
+  height:160px;
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--panel2);
+  border:2px solid var(--line);
+}
+
+.prof-card__photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.prof-card__body{
+  flex:1;
+  min-width:0;
+}
+
+.prof-card__name{
+  font-size:24px;
+  font-weight:800;
+  margin:0 0 4px;
+  color:var(--text);
+}
+
+.prof-card__role{
+  font-size:15px;
+  color:var(--accent);
+  font-weight:600;
+  margin:0 0 10px;
+}
+
+.prof-card__email{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:14px;
+  margin:0 0 20px;
+  color:var(--muted);
+}
+
+.prof-card__email svg{
+  flex-shrink:0;
+  opacity:.55;
+}
+
+.prof-card__email a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+.prof-card__email a:hover{
+  text-decoration:underline;
+}
+
+.prof-card__edu{
+  border-top:1px solid var(--line);
+  padding-top:16px;
+}
+
+.prof-card__edu-title{
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--muted);
+  margin:0 0 12px;
+}
+
+.prof-card__edu-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.prof-card__edu-item{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.prof-card__edu-icon{
+  flex-shrink:0;
+  color:var(--accent);
+  margin-top:1px;
+}
+
+.prof-card__edu-degree{
+  font-weight:700;
+  font-size:14px;
+  color:var(--text);
+  margin-right:4px;
+}
+
+.prof-card__edu-field{
+  font-size:14px;
+  color:var(--text);
+}
+
+.prof-card__edu-meta{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-top:1px;
+}
+
+@media (max-width:600px){
+  .prof-card{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:24px 20px;
+    gap:20px;
+  }
+  .prof-card__photo{width:120px;height:120px}
+  .prof-card__name{font-size:20px}
+  .prof-card__email{justify-content:center}
+  .prof-card__edu-item{flex-direction:column;align-items:center;text-align:center;gap:4px}
+}
+
 .team-section{
   margin-top:28px;
   padding-top:18px;
