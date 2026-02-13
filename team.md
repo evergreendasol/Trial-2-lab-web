@@ -6,39 +6,79 @@ title: Team
 # Team
 
 ## Faculty
-<ul class="list">
+<div class="grid">
 {% for p in site.data.team.faculty %}
-  <li><strong>{{ p.name }}</strong>{% if p.email %} — <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</li>
+  <div class="card">
+    <h3>{{ p.name }}</h3>
+    {% if p.email %}
+      <p class="small">
+        <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+      </p>
+    {% endif %}
+  </div>
 {% endfor %}
-</ul>
+</div>
+
 
 ## PhD
-<ul class="list">
+<div class="grid">
 {% for p in site.data.team.phd %}
-  <li><strong>{{ p.name }}</strong>{% if p.email %} — <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</li>
+  <div class="card">
+    <h3>{{ p.name }}</h3>
+    {% if p.email %}
+      <p class="small">
+        <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+      </p>
+    {% endif %}
+  </div>
 {% endfor %}
-</ul>
+</div>
+
 
 ## PhD Students
-<ul class="list">
+<div class="grid">
 {% for p in site.data.team.phd_students %}
-  <li><strong>{{ p.name }}</strong>{% if p.email %} — <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</li>
+  <div class="card">
+    <h3>{{ p.name }}</h3>
+    {% if p.email %}
+      <p class="small">
+        <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+      </p>
+    {% endif %}
+  </div>
 {% endfor %}
-</ul>
+</div>
+
 
 ## MS Students
-<ul class="list">
+<div class="grid">
 {% for p in site.data.team.ms_students %}
-  <li><strong>{{ p.name }}</strong>
-    {% if p.email %} — <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}
-    {% if p.note %} <span class="muted small">({{ p.note }})</span>{% endif %}
-  </li>
+  <div class="card">
+    <h3>{{ p.name }}</h3>
+    {% if p.email %}
+      <p class="small">
+        <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+      </p>
+    {% endif %}
+    {% if p.note %}
+      <p class="muted small">{{ p.note }}</p>
+    {% endif %}
+  </div>
 {% endfor %}
-</ul>
+</div>
+
 
 ## Interns
-<ul class="list">
+<div class="grid">
 {% for p in site.data.team.interns %}
-  <li><strong>{{ p.name }}</strong>{% if p.email %} — <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>{% endif %}</li>
+  <div class="card">
+    <h3>{{ p.name }}</h3>
+    {% if p.email %}
+      <p class="small">
+        <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+      </p>
+    {% endif %}
+  </div>
 {% endfor %}
-</ul>
+</div>
+
