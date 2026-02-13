@@ -1,7 +1,7 @@
 <section class="hero" style="
   background-image:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
-    url('{{ '/assets/img/people/hero.jpg' | relative_url }}');
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.62)),
+    url('{{ '/assets/img/hero.jpg' | relative_url }}');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,12 +11,8 @@
     <h1>{{ include.title }}</h1>
     <p class="lead">{{ include.subtitle }}</p>
     <div class="hero__cta">
-      <a class="btn btn--primary" href="{{ include.primary_link | relative_url }}">
-        {{ include.primary_text }}
-      </a>
-      <a class="btn btn--ghost" href="{{ include.secondary_link | relative_url }}">
-        {{ include.secondary_text }}
-      </a>
+      <a class="btn btn--primary" href="{{ include.primary_link | relative_url }}">{{ include.primary_text }}</a>
+      <a class="btn btn--ghost" href="{{ include.secondary_link | relative_url }}">{{ include.secondary_text }}</a>
     </div>
   </div>
 </section>
