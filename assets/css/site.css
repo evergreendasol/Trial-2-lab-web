@@ -183,9 +183,9 @@ a:hover{color:var(--accent)}
   color:#fff;
   border-bottom:none;
   background:
-    radial-gradient(900px 420px at 18% 10%, rgba(20,184,166,.28), transparent 60%),
-    radial-gradient(800px 420px at 80% 20%, rgba(15,118,110,.22), transparent 55%),
-    linear-gradient(180deg, var(--dark) 0%, var(--dark2) 100%);
+    radial-gradient(900px 420px at 20% 55%, rgba(20,184,166,.28), transparent 60%),
+    radial-gradient(800px 420px at 80% 65%, rgba(15,118,110,.22), transparent 55%),
+    linear-gradient(180deg, var(--dark) 0%, var(--dark) 25%, var(--dark2) 100%);
 }
 
 /* Sub-page hero: clean white (Team, Research) */
