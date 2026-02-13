@@ -8,8 +8,8 @@ title: Contact
 
     <!-- Left: Contact info (sticky) -->
     <div class="join-info">
-      <span class="join-info__label">Join Our Lab</span>
-      <h1 class="join-info__title">We'd Love to<br>Hear from You</h1>
+      <span class="join-info__label">Contact Our Lab</span>
+      <h1 class="join-info__title">Get in Touch</h1>
       <p class="join-info__desc">
         We are always looking for curious, collaborative researchers.
         If you are a prospective student (MS or PhD) or postdoc, we'd love to hear from you.
