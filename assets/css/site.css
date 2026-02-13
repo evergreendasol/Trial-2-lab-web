@@ -75,6 +75,7 @@ a:hover{color:var(--accent)}
 
 .brand{
   font-weight:800;
+  font-size:22px;
   letter-spacing:.3px;
   text-decoration:none;
   color:#fff;
