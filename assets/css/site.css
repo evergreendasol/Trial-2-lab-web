@@ -16,6 +16,9 @@
   --accent3:#0f172a;
 
   --navbg:rgba(255,255,255,.95);
+  --dark:#0f172a;         /* header/footer background */
+  --darkLine:rgba(255,255,255,.10);
+
 }
 
 *{box-sizing:border-box}
@@ -386,4 +389,69 @@ h1{
   max-height:70vh;
   object-fit:contain;
   display:block;
+}
+
+/* =========================
+   DARK HEADER + FOOTER OVERRIDES
+   ========================= */
+
+/* Header (Nav) */
+.nav{
+  background:var(--dark);
+  border-bottom:1px solid var(--darkLine);
+}
+
+.brand{
+  color:#fff;
+}
+
+.nav__links a{
+  color:rgba(255,255,255,.78);
+}
+
+.nav__links a:hover{
+  color:#fff;
+}
+
+/* Hero inside dark header area (home only; harmless elsewhere) */
+.hero{
+  background:
+    radial-gradient(900px 420px at 18% 10%, rgba(37,99,235,.22), transparent 60%),
+    radial-gradient(800px 420px at 80% 20%, rgba(30,58,138,.18), transparent 55%),
+    linear-gradient(180deg, var(--dark) 0%, #111827 100%);
+  border-bottom:1px solid var(--darkLine);
+  color:#fff;
+}
+
+.hero .lead{
+  color:rgba(255,255,255,.78);
+}
+
+.hero .pill{
+  color:rgba(255,255,255,.60);
+}
+
+/* Footer */
+.footer{
+  background:var(--dark);
+  border-top:none;
+  color:rgba(255,255,255,.78);
+}
+
+.footer a{
+  color:rgba(255,255,255,.78);
+}
+
+.footer a:hover{
+  color:#fff;
+}
+
+.footer__bottom{
+  border-top:1px solid var(--darkLine);
+  color:rgba(255,255,255,.60);
+}
+
+/* muted text inside footer should be readable */
+.footer .muted{
+  color:rgba(255,255,255,.70);
 }
