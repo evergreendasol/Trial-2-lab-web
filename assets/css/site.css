@@ -214,6 +214,8 @@ h1{
 .gallery-grid{
   /* 조금 더 촘촘하게 */
   grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+  gap:16px;
+  justify-content:start;
 }
 
 .gallery-card{
@@ -229,24 +231,26 @@ h1{
 
 .gallery-img{
   width:100%;
-  height:130px;
+  height:120px;
+  border-top-left-radius:18px;
+  border-top-right-radius:18px;
   object-fit:cover;
   display:block;
   filter:saturate(1.02) contrast(1.02);
 }
 
 .gallery-cap{
-  padding:14px 16px 16px;
+  padding:12px;
 }
 
 .gallery-title{
   margin:0;
-  font-size:16px;
+  font-size:15px;
   line-height:1.2;
 }
 
 .gallery-sub{
-  margin:8px 0 0;
+  margin:13px 0 0;
 }
 
 /* Modal */
