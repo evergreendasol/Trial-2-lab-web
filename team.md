@@ -13,10 +13,10 @@ title: Team
 </section>
 
 
-<!-- Faculty -->
+<!-- Professor (기존 faculty 배열) -->
 <section class="section">
   <div class="section__head">
-    <h2>Faculty</h2>
+    <h2>Professor</h2>
   </div>
 
   <div class="grid">
@@ -25,7 +25,9 @@ title: Team
         <h3>{{ p.name }}</h3>
         {% if p.role %}<p class="muted small">{{ p.role }}</p>{% endif %}
         {% if p.email %}
-          <p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+          <p class="small">
+            <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+          </p>
         {% endif %}
       </div>
     {% endfor %}
@@ -33,15 +35,10 @@ title: Team
 </section>
 
 
-<!-- Postdoctoral -->
+<!-- Postdoctoral Researcher (기존 phd 배열) -->
 <section class="section">
   <div class="section__head">
-    {% assign postdoc_count = site.data.team.phd | size %}
-    {% if postdoc_count > 1 %}
-      <h2>Postdoctoral Researchers</h2>
-    {% else %}
-      <h2>Postdoctoral Researcher</h2>
-    {% endif %}
+    <h2>Postdoctoral Researcher</h2>
   </div>
 
   <div class="grid">
@@ -50,7 +47,9 @@ title: Team
         <h3>{{ p.name }}</h3>
         {% if p.role %}<p class="muted small">{{ p.role }}</p>{% endif %}
         {% if p.email %}
-          <p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+          <p class="small">
+            <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+          </p>
         {% endif %}
       </div>
     {% endfor %}
@@ -69,7 +68,9 @@ title: Team
       <div class="card">
         <h3>{{ p.name }}</h3>
         {% if p.email %}
-          <p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+          <p class="small">
+            <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+          </p>
         {% endif %}
       </div>
     {% endfor %}
@@ -88,7 +89,9 @@ title: Team
       <div class="card">
         <h3>{{ p.name }}</h3>
         {% if p.email %}
-          <p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+          <p class="small">
+            <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+          </p>
         {% endif %}
       </div>
     {% endfor %}
@@ -107,7 +110,9 @@ title: Team
       <div class="card">
         <h3>{{ p.name }}</h3>
         {% if p.email %}
-          <p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+          <p class="small">
+            <a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a>
+          </p>
         {% endif %}
       </div>
     {% endfor %}
