@@ -14,6 +14,8 @@ title: Home
   secondary_link="/research"
 %}
 
+{% include carousel.html %}
+
 <section class="section" id="main-content">
   <div class="container">
     <div class="section__head">
@@ -41,8 +43,6 @@ title: Home
     </div>
   </div>
 </section>
-
-{% include carousel.html %}
 
 <section class="section news-section">
   <div class="container">

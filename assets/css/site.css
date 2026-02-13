@@ -904,7 +904,7 @@ a:hover{color:var(--accent)}
 .footer{
   background:var(--dark);
   border-top:1px solid var(--darkLine);
-  padding:36px 0 22px;
+  padding:20px 0 18px;
   color:rgba(255,255,255,.78);
 }
 
@@ -978,14 +978,6 @@ a:hover{color:var(--accent)}
 
 .gallery-sub{
   margin:6px 0 0;
-}
-
-.gallery-pagination{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  margin-top:24px;
-  flex-wrap:wrap;
 }
 
 /* =========================
@@ -1314,6 +1306,13 @@ a:hover{color:var(--accent)}
   display:flex;
   flex-direction:column;
   padding:24px;
+}
+
+.pub-card__tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:12px;
 }
 
 .pub-card__title{

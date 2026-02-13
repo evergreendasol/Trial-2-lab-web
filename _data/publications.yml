@@ -4,6 +4,7 @@
   venue: "IEEE Access 14 (2026): 9193-9200"
   doi: ""
   arxiv: ""
+  tags: ["LLM", "Knowledge Graph", "Photosynthesis"]
 
 - year: 2025
   authors: "Min-Seok Gang, Hak-Jin Kim, Sung Kwon Park, Woo-Jae Cho, Taehyeong Kim, Tae In Ahn, Joon Yong Kim, and Kue-Seung Hwang"
@@ -11,6 +12,7 @@
   venue: "Computers and Electronics in Agriculture 239 (2025): 111079"
   doi: ""
   arxiv: ""
+  tags: ["Deep Learning", "Evapotranspiration", "Greenhouse"]
 
 - year: 2025
   authors: "Kang, Jun Hyeun, Jung Eek Son, and Tae In Ahn"
@@ -18,6 +20,7 @@
   venue: "arXiv preprint arXiv:2511.15173 (2025)"
   doi: ""
   arxiv: "2511.15173"
+  tags: ["Data-Driven", "Light Spectrum", "Phenotyping"]
 
 - year: 2025
   authors: "Kim, Hyeonjee, Eunjeong Lim, and Tae In Ahn"
@@ -25,6 +28,7 @@
   venue: "Journal of Bio-Environment Control 34.4 (2025): 619-630"
   doi: ""
   arxiv: ""
+  tags: ["Photoinhibition", "Light Environment"]
 
 - year: 2025
   authors: "Min-Seok Gang, Hak-Jin Kim, Tae In Ahn, Woo-Jae Cho, Sang-Hyun Lee, Ju Young Lee, and Ji-Eun Hwang"
@@ -32,6 +36,7 @@
   venue: "Computers and Electronics in Agriculture 237 (2025): 110588"
   doi: ""
   arxiv: ""
+  tags: ["Nutrient Management", "Hydroponics", "IoT"]
 
 - year: 2025
   authors: "Jun Hyeun Kang, Ju Young Lee, and Tae In Ahn"
@@ -39,6 +44,7 @@
   venue: "Horticulture, Environment, and Biotechnology (2025): 1-12"
   doi: ""
   arxiv: ""
+  tags: ["Light Spectrum", "Photosynthesis", "Sweet Pepper"]
 
 - year: 2025
   authors: "Seungri Yoon, Woosang Jeon, Sanghyeok Choi, Taehyeong Kim, and Tae In Ahn"
@@ -46,6 +52,7 @@
   venue: "arXiv preprint arXiv:2502.01059 (2025)"
   doi: ""
   arxiv: "2502.01059"
+  tags: ["LLM", "Photosynthesis", "Knowledge Synthesis"]
 
 - year: 2024
   authors: "Tae In Ahn, Jung-Seok Yang, Yong-Hoon Im, Young Jik Youn, Dahae Kim, and Ju Young Lee"
@@ -53,6 +60,7 @@
   venue: "Journal of Cleaner Production 482 (2024): 144127"
   doi: ""
   arxiv: ""
+  tags: ["Greenhouse", "Effluent", "Sustainability"]
 
 - year: 2024
   authors: "Seungri Yoon, Yeyeong Lee, Eunkyu Jung, and Tae In Ahn"
@@ -60,6 +68,7 @@
   venue: "Journal of Bio-Environment Control 33.2 (2024): 120-128"
   doi: ""
   arxiv: ""
+  tags: ["AI", "Image Generation"]
 
 - year: 2024
   authors: "Seungri Yoon, Minju Shin, Jin Hyun Kim, Ho Jeong Jeong, Junyoung Park, and Tae In Ahn"
@@ -67,6 +76,7 @@
   venue: "Journal of Bio-Environment Control 33.1 (2024): 63-70"
   doi: ""
   arxiv: ""
+  tags: ["Computer Vision", "Phenotyping"]
 
 - year: 2024
   authors: "Seungri Yoon, Yunseong Cho, Minju Shin, Mi Young Lin, Dahae Kim, and Tae In Ahn"
@@ -74,6 +84,7 @@
   venue: "Journal of Bio-Environment Control 33.4 (2024): 352-360"
   doi: ""
   arxiv: ""
+  tags: ["Computer Vision", "AI", "Melon"]
 
 - year: 2023
   authors: "Seungri Yoon, Minju Shin, Jin Hyun Kim, Ji Wong Bang, Ho Jeong Jeong, and Tae In Ahn"
@@ -81,6 +92,7 @@
   venue: "Journal of Bio-Environment Control 32.4 (2023): 456-465"
   doi: ""
   arxiv: ""
+  tags: ["Computer Vision", "Fruit Modeling", "Melon"]
 
 - year: 2023
   authors: "Jun Hyeun Kang, Hyo In Yoon, Jaewoo Kim, Tae In Ahn, and Jung Eek Son"
@@ -88,6 +100,7 @@
   venue: "Scientia Horticulturae 311 (2023): 111806"
   doi: ""
   arxiv: ""
+  tags: ["Ray Tracing", "Light Spectrum", "Kale"]
 
 - year: 2023
   authors: "Seungri Yoon, Jin Hyun Kim, Minju Shin, Dongpil Kim, Ji Wong Bang, Ho Jeong Jeong, and Tae In Ahn"
@@ -95,6 +108,7 @@
   venue: "Journal of Bio-Environment Control 32.1 (2023): 48-56"
   doi: ""
   arxiv: ""
+  tags: ["Thermal Analysis", "Greenhouse", "Light Environment"]
 
 - year: 2022
   authors: "Taewon Moon, Dongpil Kim, Sungmin Kwon, Tae In Ahn, and Jung Eek Son"
@@ -102,6 +116,7 @@
   venue: "Sensors 22.20 (2022): 7728"
   doi: ""
   arxiv: ""
+  tags: ["Deep Learning", "Non-Destructive", "Monitoring"]
 
 - year: 2022
   authors: "Tae In Ahn, and Jung Eek Son"
@@ -109,3 +124,4 @@
   venue: "Horticulturae 8.4 (2022): 295"
   doi: ""
   arxiv: ""
+  tags: ["Nutrient Management", "Hydroponics", "Sweet Pepper"]
