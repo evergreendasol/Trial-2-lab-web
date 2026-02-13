@@ -12,9 +12,44 @@ title: Team
   </div>
 </section>
 
+{% assign faculty_count = site.data.team.faculty | size %}
+{% assign postdoc_count = site.data.team.phd | size %}
+{% assign phd_students_count = site.data.team.phd_students | size %}
+{% assign ms_count = site.data.team.ms_students | size %}
+{% assign ug_count = site.data.team.interns | size %}
+
+<!-- Summary -->
+<section class="section">
+  <div class="grid">
+    <div class="card">
+      <h3>Professor</h3>
+      <p class="muted">{{ faculty_count }} member(s)</p>
+    </div>
+
+    <div class="card">
+      <h3>Postdoctoral Researcher</h3>
+      <p class="muted">{{ postdoc_count }} member(s)</p>
+    </div>
+
+    <div class="card">
+      <h3>Ph.D. Students</h3>
+      <p class="muted">{{ phd_students_count }} member(s)</p>
+    </div>
+
+    <div class="card">
+      <h3>MS Students</h3>
+      <p class="muted">{{ ms_count }} member(s)</p>
+    </div>
+
+    <div class="card">
+      <h3>Undergraduate</h3>
+      <p class="muted">{{ ug_count }} member(s)</p>
+    </div>
+  </div>
+</section>
 
 <!-- Professor (from faculty) -->
-<section class="section team-section">
+<section class="section team-section" id="professor">
   <div class="section__head">
     <h2>Professor</h2>
   </div>
@@ -31,9 +66,8 @@ title: Team
   </div>
 </section>
 
-
 <!-- Postdoctoral Researcher (from phd) -->
-<section class="section team-section">
+<section class="section team-section" id="postdoc">
   <div class="section__head">
     <h2>Postdoctoral Researcher</h2>
   </div>
@@ -50,9 +84,8 @@ title: Team
   </div>
 </section>
 
-
 <!-- Ph.D. Students -->
-<section class="section team-section">
+<section class="section team-section" id="phd">
   <div class="section__head">
     <h2>Ph.D. Students</h2>
   </div>
@@ -68,9 +101,8 @@ title: Team
   </div>
 </section>
 
-
 <!-- MS Students -->
-<section class="section team-section">
+<section class="section team-section" id="ms">
   <div class="section__head">
     <h2>MS Students</h2>
   </div>
@@ -86,9 +118,8 @@ title: Team
   </div>
 </section>
 
-
 <!-- Undergraduate (from interns) -->
-<section class="section team-section">
+<section class="section team-section" id="ug">
   <div class="section__head">
     <h2>Undergraduate</h2>
   </div>
