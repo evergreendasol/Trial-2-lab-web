@@ -30,10 +30,10 @@ title: Contact
 
       <div class="join-info__map">
         <iframe
-          src="https://www.openstreetmap.org/export/embed.html?bbox=126.9480%2C37.4570%2C126.9580%2C37.4630&layer=mapnik&marker=37.4602%2C126.9526"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=126.9436%2C37.4564%2C126.9536%2C37.4624&layer=mapnik&marker=37.4594%2C126.9486"
           loading="lazy"
           referrerpolicy="no-referrer"
-          title="Seoul National University Location">
+          title="Seoul National University College of Agriculture and Life Sciences">
         </iframe>
       </div>
     </div>
