@@ -31,12 +31,12 @@ title: Publications
   {% endif %}
 
     <div class="card pub-card">
+      <h3 class="pub-card__title">{{ pub.title }}</h3>
       {% if pub.tags.size > 0 %}
       <div class="pub-card__tags">
         {% for tag in pub.tags %}<span class="badge">{{ tag }}</span>{% endfor %}
       </div>
       {% endif %}
-      <h3 class="pub-card__title">{{ pub.title }}</h3>
       <p class="pub-card__authors">{{ pub.authors }}</p>
       <p class="pub-card__venue">{{ pub.venue }}</p>
       {% if pub.url and pub.url != "" %}
