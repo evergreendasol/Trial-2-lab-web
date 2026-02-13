@@ -4,6 +4,7 @@ title: Home
 ---
 
 {% include hero.html
+  image="/assets/img/hero-bg.svg"
   pill="Greenhouse Horticulture and Plant Factory Lab"
   title="Integrating plant biology and environmental control"
   subtitle="For next-generation plant production systems."
@@ -11,13 +12,11 @@ title: Home
   primary_link="/team"
   secondary_text="Explore Research"
   secondary_link="/research"
-  tertiary_text="Publications"
-  tertiary_link="/publications"
 %}
 
 {% include carousel.html %}
 
-<section class="section">
+<section class="section" id="main-content">
   <div class="container">
     <div class="section__head">
       <h2>Highlights</h2>

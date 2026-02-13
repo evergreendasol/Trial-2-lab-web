@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a2a"/>
+      <stop offset="60%" stop-color="#1e4d35"/>
+      <stop offset="100%" stop-color="#1a3a2a"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d7a5a" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#1e5c40" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="glow" x1=".5" y1="0" x2=".5" y2="1">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <!-- Subtle light rays -->
+  <ellipse cx="960" cy="200" rx="900" ry="400" fill="url(#glow)"/>
+  <!-- Greenhouse structure -->
+  <g opacity=".18" stroke="#4ade80" stroke-width="1.5" fill="none">
+    <!-- Main greenhouse frame -->
+    <path d="M260 700 L960 280 L1660 700"/>
+    <rect x="320" y="520" width="1280" height="360" rx="4"/>
+    <line x1="960" y1="280" x2="960" y2="880"/>
+    <line x1="640" y1="520" x2="640" y2="880"/>
+    <line x1="1280" y1="520" x2="1280" y2="880"/>
+    <!-- Cross beams -->
+    <line x1="320" y1="700" x2="1600" y2="700"/>
+    <!-- Arch roof segments -->
+    <path d="M320 520 Q640 340 960 520"/>
+    <path d="M960 520 Q1280 340 1600 520"/>
+    <!-- Vertical supports -->
+    <line x1="480" y1="520" x2="480" y2="880"/>
+    <line x1="800" y1="520" x2="800" y2="880"/>
+    <line x1="1120" y1="520" x2="1120" y2="880"/>
+    <line x1="1440" y1="520" x2="1440" y2="880"/>
+  </g>
+  <!-- Plants row 1 -->
+  <g opacity=".12" stroke="#4ade80" stroke-width="1.2" fill="none">
+    <circle cx="400" cy="780" r="30"/>
+    <line x1="400" y1="810" x2="400" y2="860"/>
+    <circle cx="560" cy="760" r="35"/>
+    <line x1="560" y1="795" x2="560" y2="860"/>
+    <circle cx="720" cy="770" r="28"/>
+    <line x1="720" y1="798" x2="720" y2="860"/>
+    <circle cx="880" cy="755" r="38"/>
+    <line x1="880" y1="793" x2="880" y2="860"/>
+    <circle cx="1040" cy="765" r="32"/>
+    <line x1="1040" y1="797" x2="1040" y2="860"/>
+    <circle cx="1200" cy="775" r="30"/>
+    <line x1="1200" y1="805" x2="1200" y2="860"/>
+    <circle cx="1360" cy="750" r="36"/>
+    <line x1="1360" y1="786" x2="1360" y2="860"/>
+    <circle cx="1520" cy="770" r="28"/>
+    <line x1="1520" y1="798" x2="1520" y2="860"/>
+  </g>
+  <!-- Floating particles / data dots -->
+  <g fill="#4ade80" opacity=".06">
+    <circle cx="300" cy="400" r="3"/>
+    <circle cx="580" cy="350" r="2"/>
+    <circle cx="800" cy="450" r="4"/>
+    <circle cx="1100" cy="380" r="2.5"/>
+    <circle cx="1350" cy="420" r="3"/>
+    <circle cx="1580" cy="360" r="2"/>
+    <circle cx="450" cy="500" r="2.5"/>
+    <circle cx="1450" cy="480" r="3"/>
+  </g>
+</svg>
