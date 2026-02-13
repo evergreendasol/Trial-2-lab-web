@@ -1,5 +1,5 @@
 - year: 2026
-  authors: "Yoon, Seungri, and Tae In Ahn"
+  authors: "Seungri Yoon, and Tae In Ahn"
   title: "Design and Evaluation of an LLM-Based Knowledge Graph System for Photosynthesis Research"
   venue: "IEEE Access 14 (2026): 9193-9200"
   doi: ""
@@ -23,7 +23,7 @@
   tags: ["Data-Driven", "Light Spectrum", "Phenotyping"]
 
 - year: 2025
-  authors: "Kim, Hyeonjee, Eunjeong Lim, and Tae In Ahn"
+  authors: "Hyeonjee Kim, Eunjeong Lim, and Tae In Ahn"
   title: "Temporal and Age-Dependent Dynamics of Photoinhibitory Responses under Diverse Light Scenarios"
   venue: "Journal of Bio-Environment Control 34.4 (2025): 619-630"
   doi: ""
