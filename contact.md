@@ -29,7 +29,7 @@ title: Contact
 
       <div class="join-info__map">
         <iframe
-          src="https://www.openstreetmap.org/export/embed.html?bbox=126.9442%2C37.4536%2C126.9542%2C37.4596&layer=mapnik&marker=37.4566%2C126.9492"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=126.9436%2C37.4547%2C126.9536%2C37.4607&layer=mapnik&marker=37.4577%2C126.9486"
           loading="lazy"
           referrerpolicy="no-referrer"
           title="Seoul National University College of Agriculture and Life Sciences">
