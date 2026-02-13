@@ -34,6 +34,7 @@ title: Gallery
       </figure>
     {% endfor %}
   </div>
+  <nav class="gallery-pagination" aria-label="Gallery pages"></nav>
 </section>
 
 </div>
@@ -64,19 +65,69 @@ title: Gallery
   const gmCaption = document.getElementById('gmCaption');
   const gmClose = document.getElementById('gmClose');
 
-  document.querySelectorAll('.gallery-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      gmImg.src = btn.dataset.src;
-      gmImg.alt = btn.dataset.title || 'Gallery image';
-      gmTitle.textContent = btn.dataset.title || '';
-      gmCaption.textContent = btn.dataset.caption || '';
+  const grid = document.querySelector('.gallery-grid');
+  const pager = document.querySelector('.gallery-pagination');
+  const cards = Array.from(document.querySelectorAll('.gallery-card'));
+
+  const perPage = 6;
+  const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
+
+  function showPage(page) {
+    const start = (page - 1) * perPage;
+    const end = start + perPage;
+    cards.forEach((c, i) => c.style.display = (i >= start && i < end) ? '' : 'none');
+    renderPager(page);
+  }
+
+  function renderPager(cur) {
+    if (!pager || totalPages <= 1) return;
+    pager.innerHTML = '';
+
+    const prev = btn('Prev', cur <= 1);
+    prev.addEventListener('click', () => go(cur - 1));
+    pager.appendChild(prev);
+
+    for (let p = 1; p <= totalPages; p++) {
+      const b = btn(String(p), false);
+      if (p === cur) b.classList.add('gallery-pagination__active');
+      b.addEventListener('click', () => go(p));
+      pager.appendChild(b);
+    }
+
+    const next = btn('Next', cur >= totalPages);
+    next.addEventListener('click', () => go(cur + 1));
+    pager.appendChild(next);
+  }
+
+  function btn(text, disabled) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'btn btn--ghost';
+    b.textContent = text;
+    b.disabled = disabled;
+    return b;
+  }
+
+  function go(page) {
+    const safe = Math.min(Math.max(page, 1), totalPages);
+    showPage(safe);
+    grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Modal
+  document.querySelectorAll('.gallery-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      gmImg.src = b.dataset.src;
+      gmImg.alt = b.dataset.title || 'Gallery image';
+      gmTitle.textContent = b.dataset.title || '';
+      gmCaption.textContent = b.dataset.caption || '';
       modal.showModal();
     });
   });
-
   gmClose.addEventListener('click', () => modal.close());
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.close();
-  });
+  modal.addEventListener('click', (e) => { if (e.target === modal) modal.close(); });
+
+  // Init
+  showPage(1);
 })();
 </script>
