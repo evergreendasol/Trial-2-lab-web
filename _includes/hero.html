@@ -1,29 +1,35 @@
-<section class="hero hero--photo">
-  <div class="container hero__inner">
+<section class="hero hero--fullscreen" {% if include.image %}style="--hero-img:url('{{ include.image | relative_url }}')"{% endif %}>
+  <div class="hero__overlay"></div>
 
+  <div class="container hero__inner">
+    {% if include.pill %}
     <p class="pill">{{ include.pill }}</p>
+    {% endif %}
 
     <h1>{{ include.title }}</h1>
 
+    {% if include.subtitle %}
     <p class="lead">{{ include.subtitle }}</p>
+    {% endif %}
 
-    <p class="hero__welcome">Welcome to our website. Our lab studies smart greenhouse and plant factory systems based on plant physiology and environmental control.</p>
-
+    {% if include.primary_text %}
     <div class="hero__cta">
       <a class="btn btn--primary" href="{{ include.primary_link | relative_url }}">
         {{ include.primary_text }}
       </a>
-
-      <a class="btn btn--primary" href="{{ include.secondary_link | relative_url }}">
+      {% if include.secondary_text %}
+      <a class="btn btn--outline" href="{{ include.secondary_link | relative_url }}">
         {{ include.secondary_text }}
-      </a>
-
-      {% if include.tertiary_text %}
-      <a class="btn btn--primary" href="{{ include.tertiary_link | relative_url }}">
-        {{ include.tertiary_text }}
       </a>
       {% endif %}
     </div>
-
+    {% endif %}
   </div>
+
+  <a class="hero__scroll" href="#main-content" aria-label="Scroll down">
+    <span class="hero__scroll-label">Learn More</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </a>
 </section>
