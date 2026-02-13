@@ -213,7 +213,7 @@ h1{
 
 .gallery-grid{
   /* 조금 더 촘촘하게 */
-  grid-template-columns: repeat(auto-fit, minmax(240px, 320px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
 }
 
 .gallery-card{
@@ -229,7 +229,7 @@ h1{
 
 .gallery-img{
   width:100%;
-  height:180px;
+  height:130px;
   object-fit:cover;
   display:block;
   filter:saturate(1.02) contrast(1.02);
