@@ -17,6 +17,7 @@ title: Team
 {% assign phd_students_count = site.data.team.phd_students | size %}
 {% assign ms_count = site.data.team.ms_students | size %}
 {% assign ug_count = site.data.team.interns | size %}
+{% assign alumni_count = site.data.team.alumni | size %}
 
 <!-- Summary -->
 <section class="section">
@@ -59,6 +60,14 @@ title: Team
       </span>
       <span class="team-summary-card__count">{{ ug_count }}</span>
       <span class="team-summary-card__label">Undergraduate</span>
+    </a>
+
+    <a href="#alumni" class="team-summary-card" style="--card-accent:#64748b">
+      <span class="team-summary-card__icon">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      <span class="team-summary-card__count">{{ alumni_count }}</span>
+      <span class="team-summary-card__label">Alumni</span>
     </a>
   </div>
 </section>
@@ -175,6 +184,34 @@ title: Team
       </div>
     {% endfor %}
   </div>
+</section>
+
+<!-- Alumni -->
+<section class="section team-section" id="alumni">
+  <div class="section__head">
+    <h2>Alumni</h2>
+  </div>
+
+  {% if site.data.team.alumni.size > 0 %}
+  <div class="grid team-grid">
+    {% for p in site.data.team.alumni %}
+      <div class="card team-card">
+        <div class="team-card__photo">
+          <img src="{{ p.photo | default: 'assets/img/team/default.svg' | relative_url }}" alt="{{ p.name }}" onerror="this.src='{{ default_photo }}'">
+        </div>
+        <div class="team-card__info">
+          <h3>{{ p.name }}</h3>
+          {% if p.degree %}<p class="muted small">{{ p.degree }}</p>{% endif %}
+          {% if p.year %}<p class="muted small">{{ p.year }}</p>{% endif %}
+          {% if p.current %}<p class="small">{{ p.current }}</p>{% endif %}
+          {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="muted">Alumni will be listed here.</p>
+  {% endif %}
 </section>
 
 </div>
