@@ -1,13 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
-    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#1e3a8a" stop-opacity="0.18"/>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#065f46"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34d399"/>
     </linearGradient>
   </defs>
-  <rect width="1600" height="900" fill="#0f172a"/>
-  <rect x="60" y="60" width="1480" height="780" rx="40" fill="url(#g2)" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
-  <text x="120" y="200" fill="rgba(255,255,255,0.90)" font-size="80" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800">CAROUSEL</text>
-  <text x="120" y="310" fill="rgba(255,255,255,0.65)" font-size="40" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial">SLIDE 02 — Plant Factory</text>
-  <text x="120" y="780" fill="rgba(255,255,255,0.50)" font-size="26" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial">Replace with a real photo (recommended: 1600×900)</text>
+  <rect width="1600" height="900" fill="url(#bg2)"/>
+  <!-- decorative shapes -->
+  <rect x="100" y="100" width="400" height="300" rx="20" fill="rgba(255,255,255,0.06)"/>
+  <rect x="1100" y="500" width="400" height="300" rx="20" fill="rgba(255,255,255,0.06)"/>
+  <!-- vertical farm shelves -->
+  <rect x="550" y="200" width="500" height="40" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <rect x="550" y="300" width="500" height="40" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <rect x="550" y="400" width="500" height="40" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <!-- LED lights -->
+  <rect x="570" y="190" width="60" height="6" rx="3" fill="rgba(167,139,250,0.7)"/>
+  <rect x="660" y="190" width="60" height="6" rx="3" fill="rgba(167,139,250,0.7)"/>
+  <rect x="750" y="190" width="60" height="6" rx="3" fill="rgba(167,139,250,0.7)"/>
+  <rect x="840" y="190" width="60" height="6" rx="3" fill="rgba(167,139,250,0.7)"/>
+  <rect x="930" y="190" width="60" height="6" rx="3" fill="rgba(167,139,250,0.7)"/>
+  <rect x="570" y="290" width="60" height="6" rx="3" fill="rgba(251,191,36,0.5)"/>
+  <rect x="660" y="290" width="60" height="6" rx="3" fill="rgba(251,191,36,0.5)"/>
+  <rect x="750" y="290" width="60" height="6" rx="3" fill="rgba(251,191,36,0.5)"/>
+  <rect x="840" y="290" width="60" height="6" rx="3" fill="rgba(251,191,36,0.5)"/>
+  <rect x="930" y="290" width="60" height="6" rx="3" fill="rgba(251,191,36,0.5)"/>
+  <!-- plants on shelves -->
+  <ellipse cx="600" cy="230" rx="18" ry="28" fill="rgba(74,222,128,0.6)"/>
+  <ellipse cx="650" cy="225" rx="15" ry="32" fill="rgba(74,222,128,0.5)"/>
+  <ellipse cx="700" cy="228" rx="20" ry="30" fill="rgba(34,197,94,0.5)"/>
+  <ellipse cx="760" cy="230" rx="16" ry="28" fill="rgba(74,222,128,0.55)"/>
+  <ellipse cx="820" cy="226" rx="18" ry="30" fill="rgba(34,197,94,0.5)"/>
+  <ellipse cx="880" cy="230" rx="15" ry="28" fill="rgba(74,222,128,0.6)"/>
+  <ellipse cx="940" cy="228" rx="20" ry="26" fill="rgba(34,197,94,0.45)"/>
+  <ellipse cx="600" cy="330" rx="18" ry="28" fill="rgba(74,222,128,0.5)"/>
+  <ellipse cx="660" cy="335" rx="20" ry="30" fill="rgba(34,197,94,0.55)"/>
+  <ellipse cx="730" cy="332" rx="16" ry="28" fill="rgba(74,222,128,0.5)"/>
+  <ellipse cx="800" cy="328" rx="18" ry="32" fill="rgba(74,222,128,0.6)"/>
+  <ellipse cx="870" cy="332" rx="15" ry="28" fill="rgba(34,197,94,0.5)"/>
+  <ellipse cx="940" cy="330" rx="20" ry="26" fill="rgba(74,222,128,0.45)"/>
+  <!-- text -->
+  <text x="800" y="560" fill="rgba(255,255,255,0.95)" font-size="52" font-family="system-ui, -apple-system, sans-serif" font-weight="700" text-anchor="middle">Plant Factory</text>
+  <text x="800" y="620" fill="rgba(255,255,255,0.7)" font-size="28" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Vertical farming &amp; controlled environment agriculture</text>
+  <text x="800" y="820" fill="rgba(255,255,255,0.4)" font-size="20" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Placeholder — replace with real photo (1600 x 900)</text>
 </svg>

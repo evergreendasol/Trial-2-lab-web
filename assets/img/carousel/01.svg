@@ -1,13 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
   <defs>
-    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1e3a8a" stop-opacity="0.25"/>
-      <stop offset="1" stop-color="#2563eb" stop-opacity="0.15"/>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
     </linearGradient>
   </defs>
-  <rect width="1600" height="900" fill="#0f172a"/>
-  <rect x="60" y="60" width="1480" height="780" rx="40" fill="url(#g1)" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
-  <text x="120" y="200" fill="rgba(255,255,255,0.90)" font-size="80" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-weight="800">CAROUSEL</text>
-  <text x="120" y="310" fill="rgba(255,255,255,0.65)" font-size="40" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial">SLIDE 01 — Smart Greenhouse</text>
-  <text x="120" y="780" fill="rgba(255,255,255,0.50)" font-size="26" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial">Replace with a real photo (recommended: 1600×900)</text>
+  <rect width="1600" height="900" fill="url(#bg1)"/>
+  <!-- decorative circles -->
+  <circle cx="300" cy="350" r="220" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="1300" cy="600" r="280" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="800" cy="200" r="150" fill="rgba(255,255,255,0.05)"/>
+  <!-- grid pattern -->
+  <line x1="0" y1="300" x2="1600" y2="300" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="0" y1="600" x2="1600" y2="600" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="533" y1="0" x2="533" y2="900" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="1066" y1="0" x2="1066" y2="900" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- greenhouse icon -->
+  <rect x="620" y="260" width="360" height="220" rx="8" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+  <path d="M600 280 L800 160 L1000 280" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+  <line x1="800" y1="160" x2="800" y2="480" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <line x1="620" y1="370" x2="980" y2="370" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <!-- plant shapes -->
+  <ellipse cx="720" cy="430" rx="30" ry="45" fill="rgba(74,222,128,0.4)"/>
+  <ellipse cx="880" cy="430" rx="30" ry="45" fill="rgba(74,222,128,0.3)"/>
+  <ellipse cx="800" cy="420" rx="25" ry="55" fill="rgba(74,222,128,0.5)"/>
+  <!-- text -->
+  <text x="800" y="600" fill="rgba(255,255,255,0.95)" font-size="52" font-family="system-ui, -apple-system, sans-serif" font-weight="700" text-anchor="middle">Smart Greenhouse</text>
+  <text x="800" y="660" fill="rgba(255,255,255,0.7)" font-size="28" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Environmental monitoring &amp; control systems</text>
+  <text x="800" y="820" fill="rgba(255,255,255,0.4)" font-size="20" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Placeholder — replace with real photo (1600 x 900)</text>
 </svg>

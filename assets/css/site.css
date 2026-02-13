@@ -126,10 +126,9 @@ a:hover{color:var(--accent)}
   border-bottom:1px solid var(--line);
 }
 
-/* hero content */
+/* hero content – container 중앙 정렬 유지 */
 .hero__inner{
-  /* container 안에서 꽉 차게 */
-  max-width:none;
+  text-align:center;
 }
 
 .pill{
@@ -151,6 +150,8 @@ a:hover{color:var(--accent)}
 .hero .lead{
   font-size:18px;
   max-width:76ch;
+  margin-left:auto;
+  margin-right:auto;
   color:inherit;
   opacity:.9;
 }
@@ -160,12 +161,15 @@ a:hover{color:var(--accent)}
   gap:14px;
   margin-top:22px;
   flex-wrap:wrap;
+  justify-content:center;
 }
 
 /* 추가 환영문 (원하면 hero.html에서 사용) */
 .hero__welcome{
   margin-top:16px;
   max-width:70ch;
+  margin-left:auto;
+  margin-right:auto;
   opacity:.92;
 }
 
