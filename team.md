@@ -21,30 +21,30 @@ title: Team
 <!-- Summary -->
 <section class="section">
   <div class="grid">
-    <div class="card">
+    <a href="#professor" class="card team-summary-card">
       <h3>Professor</h3>
       <p class="muted">{{ faculty_count }} member(s)</p>
-    </div>
+    </a>
 
-    <div class="card">
+    <a href="#postdoc" class="card team-summary-card">
       <h3>Postdoctoral Researcher</h3>
       <p class="muted">{{ postdoc_count }} member(s)</p>
-    </div>
+    </a>
 
-    <div class="card">
+    <a href="#phd" class="card team-summary-card">
       <h3>Ph.D. Students</h3>
       <p class="muted">{{ phd_students_count }} member(s)</p>
-    </div>
+    </a>
 
-    <div class="card">
+    <a href="#ms" class="card team-summary-card">
       <h3>MS Students</h3>
       <p class="muted">{{ ms_count }} member(s)</p>
-    </div>
+    </a>
 
-    <div class="card">
+    <a href="#ug" class="card team-summary-card">
       <h3>Undergraduate</h3>
       <p class="muted">{{ ug_count }} member(s)</p>
-    </div>
+    </a>
   </div>
 </section>
 
