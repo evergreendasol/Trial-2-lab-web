@@ -142,3 +142,36 @@ h1{
   .grid{grid-template-columns:1fr}
   .footer__grid{grid-template-columns:1fr}
 }
+
+/* --- FOOTER alignment fixes --- */
+.footer__grid{
+  align-items:start;      /* 각 컬럼 상단 정렬 */
+  justify-items:start;
+}
+
+/* footer 내부 기본 마진 제거(열 맞춤 핵심) */
+.footer h3,
+.footer h4{
+  margin:0 0 10px;
+}
+
+.footer p{
+  margin:0;
+}
+
+.footer ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+/* 링크 리스트 간격 */
+.footer li{
+  margin:6px 0;
+}
+
+/* Contact 쪽도 같은 높이감으로 */
+.footer .small{
+  line-height:1.4;
+}
+
