@@ -904,7 +904,7 @@ a:hover{color:var(--accent)}
 .footer{
   background:var(--dark);
   border-top:1px solid var(--darkLine);
-  padding:36px 0 22px;
+  padding:20px 0 18px;
   color:rgba(255,255,255,.78);
 }
 
