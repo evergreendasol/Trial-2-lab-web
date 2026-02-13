@@ -1,49 +1,69 @@
 faculty:
   - name: 안태인
     email: tiahn@snu.ac.kr
+    photo: assets/img/team/ahn-taein.jpg
 
 phd:
   - name: 황인하
     email: dlsgk1003@snu.ac.kr
+    photo: assets/img/team/hwang-inha.jpg
 
 phd_students:
   - name: 김재우
     email: plmokn78@snu.ac.kr
+    photo: assets/img/team/kim-jaewoo.jpg
   - name: 권성민
     email: leodemian@snu.ac.kr
+    photo: assets/img/team/kwon-seongmin.jpg
   - name: 김다해
     email: dahaekim@snu.ac.kr
+    photo: assets/img/team/kim-dahae.jpg
   - name: 임은정
     email: eunjeong21@snu.ac.kr
+    photo: assets/img/team/lim-eunjeong.jpg
   - name: 윤승리
     email: ysl2848@snu.ac.kr
+    photo: assets/img/team/yoon-seungri.jpg
   - name: 김다솔
     email: evergreen_dasol@snu.ac.kr
+    photo: assets/img/team/kim-dasol.jpg
   - name: 이혜란
     email: hellen0@snu.ac.kr
+    photo: assets/img/team/lee-hyeran.jpg
   - name: 이예영
     email: yeyeonglee@snu.ac.kr
+    photo: assets/img/team/lee-yeyeong.jpg
   - name: 김예린
     email: dpflskol@snu.ac.kr
+    photo: assets/img/team/kim-yerin.jpg
   - name: 강병주
     email: qudwn8331@snu.ac.kr
+    photo: assets/img/team/kang-byeongju.jpg
 
 ms_students:
   - name: 김수진
     note: "Email not available"
+    photo: assets/img/team/kim-sujin.jpg
   - name: 한민희
     email: 109vv@snu.ac.kr
+    photo: assets/img/team/han-minhee.jpg
   - name: 김현지
     email: khjkhj0628@snu.ac.kr
+    photo: assets/img/team/kim-hyunji.jpg
   - name: 김정호
     email: ddd162@snu.ac.kr
+    photo: assets/img/team/kim-jeongho.jpg
   - name: 고준영
     email: sat1153@snu.ac.kr
+    photo: assets/img/team/ko-junyoung.jpg
 
 interns:
   - name: 조준영
     email: highlife0320@snu.ac.kr
+    photo: assets/img/team/jo-junyoung.jpg
   - name: 김민서
     email: rodi7555@snu.ac.kr
+    photo: assets/img/team/kim-minseo.jpg
   - name: 방유찬
     email: uchan812@snu.ac.kr
+    photo: assets/img/team/bang-yuchan.jpg

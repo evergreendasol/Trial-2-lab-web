@@ -48,6 +48,8 @@ title: Team
   </div>
 </section>
 
+{% assign default_photo = '/assets/img/team/default.svg' | relative_url %}
+
 <!-- Professor (from faculty) -->
 <section class="section team-section" id="professor">
   <div class="section__head">
@@ -57,10 +59,15 @@ title: Team
   <div class="grid team-grid">
     {% for p in site.data.team.faculty %}
       <div class="card team-card">
-        <h3>{{ p.name }}</h3>
-        {% if p.role %}<p class="muted small">{{ p.role }}</p>{% endif %}
-        {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
-        {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        <div class="team-card__photo">
+          <img src="{{ p.photo | default: 'assets/img/team/default.svg' | relative_url }}" alt="{{ p.name }}" onerror="this.src='{{ default_photo }}'">
+        </div>
+        <div class="team-card__info">
+          <h3>{{ p.name }}</h3>
+          {% if p.role %}<p class="muted small">{{ p.role }}</p>{% endif %}
+          {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+          {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -75,10 +82,15 @@ title: Team
   <div class="grid team-grid">
     {% for p in site.data.team.phd %}
       <div class="card team-card">
-        <h3>{{ p.name }}</h3>
-        {% if p.role %}<p class="muted small">{{ p.role }}</p>{% endif %}
-        {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
-        {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        <div class="team-card__photo">
+          <img src="{{ p.photo | default: 'assets/img/team/default.svg' | relative_url }}" alt="{{ p.name }}" onerror="this.src='{{ default_photo }}'">
+        </div>
+        <div class="team-card__info">
+          <h3>{{ p.name }}</h3>
+          {% if p.role %}<p class="muted small">{{ p.role }}</p>{% endif %}
+          {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+          {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -93,9 +105,14 @@ title: Team
   <div class="grid team-grid">
     {% for p in site.data.team.phd_students %}
       <div class="card team-card">
-        <h3>{{ p.name }}</h3>
-        {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
-        {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        <div class="team-card__photo">
+          <img src="{{ p.photo | default: 'assets/img/team/default.svg' | relative_url }}" alt="{{ p.name }}" onerror="this.src='{{ default_photo }}'">
+        </div>
+        <div class="team-card__info">
+          <h3>{{ p.name }}</h3>
+          {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+          {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -110,9 +127,14 @@ title: Team
   <div class="grid team-grid">
     {% for p in site.data.team.ms_students %}
       <div class="card team-card">
-        <h3>{{ p.name }}</h3>
-        {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
-        {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        <div class="team-card__photo">
+          <img src="{{ p.photo | default: 'assets/img/team/default.svg' | relative_url }}" alt="{{ p.name }}" onerror="this.src='{{ default_photo }}'">
+        </div>
+        <div class="team-card__info">
+          <h3>{{ p.name }}</h3>
+          {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+          {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
@@ -127,9 +149,14 @@ title: Team
   <div class="grid team-grid">
     {% for p in site.data.team.interns %}
       <div class="card team-card">
-        <h3>{{ p.name }}</h3>
-        {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
-        {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        <div class="team-card__photo">
+          <img src="{{ p.photo | default: 'assets/img/team/default.svg' | relative_url }}" alt="{{ p.name }}" onerror="this.src='{{ default_photo }}'">
+        </div>
+        <div class="team-card__info">
+          <h3>{{ p.name }}</h3>
+          {% if p.email %}<p class="small"><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+          {% if p.note %}<p class="muted small">{{ p.note }}</p>{% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
