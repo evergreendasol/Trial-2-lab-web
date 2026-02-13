@@ -13,6 +13,8 @@ title: Home
   secondary_link="/research"
 %}
 
+{% include carousel.html %}
+
 <section class="section">
   <div class="container">
     <div class="section__head">
