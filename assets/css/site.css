@@ -1316,6 +1316,13 @@ a:hover{color:var(--accent)}
   padding:24px;
 }
 
+.pub-card__tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:12px;
+}
+
 .pub-card__title{
   font-size:16px;
   font-weight:700;
