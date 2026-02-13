@@ -26,17 +26,17 @@ title: Publications
       <div class="section__head">
         <h2>{{ pub.year }}</h2>
       </div>
-      <div class="grid team-grid">
+      <div class="pub-grid">
     {% assign current_year = pub.year %}
   {% endif %}
 
-    <div class="card team-card">
-      <h3>{{ pub.title }}</h3>
-      <p class="muted small">{{ pub.authors }}</p>
-      <p class="small"><em>{{ pub.venue }}</em></p>
+    <div class="card pub-card">
+      <h3 class="pub-card__title">{{ pub.title }}</h3>
+      <p class="pub-card__authors">{{ pub.authors }}</p>
+      <p class="pub-card__venue">{{ pub.venue }}</p>
       {% if pub.url and pub.url != "" %}
-        <p class="small">
-          <a class="link" href="{{ pub.url }}">View Paper</a>
+        <p class="pub-card__link">
+          <a class="link" href="{{ pub.url }}">View Paper &rarr;</a>
         </p>
       {% endif %}
     </div>
