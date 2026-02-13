@@ -27,6 +27,15 @@ title: Contact
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         <span>Department of Agriculture, Forestry and Bioresources,<br>Seoul National University<br>1 Gwanak-ro, Gwanak-gu, Seoul 08826</span>
       </div>
+
+      <div class="join-info__map">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=126.9480%2C37.4570%2C126.9580%2C37.4630&layer=mapnik&marker=37.4602%2C126.9526"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          title="Seoul National University Location">
+        </iframe>
+      </div>
     </div>
 
     <!-- Right: Position cards -->
