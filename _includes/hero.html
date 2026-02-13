@@ -18,9 +18,15 @@
         {{ include.primary_text }}
       </a>
 
-      <a class="btn btn--ghost" href="{{ include.secondary_link | relative_url }}">
+      <a class="btn btn--primary" href="{{ include.secondary_link | relative_url }}">
         {{ include.secondary_text }}
       </a>
+
+      {% if include.tertiary_text %}
+      <a class="btn btn--primary" href="{{ include.tertiary_link | relative_url }}">
+        {{ include.tertiary_text }}
+      </a>
+      {% endif %}
     </div>
 
   </div>

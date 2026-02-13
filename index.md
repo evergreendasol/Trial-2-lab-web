@@ -11,6 +11,8 @@ title: Home
   primary_link="/team"
   secondary_text="Explore Research"
   secondary_link="/research"
+  tertiary_text="Publications"
+  tertiary_link="/publications"
 %}
 
 {% include carousel.html %}
