@@ -1,6 +1,5 @@
 :root{
   /* ===== White + Navy Academic Theme ===== */
-
   --bg:#ffffff;
   --bg2:#f3f6fb;
 
@@ -16,9 +15,11 @@
   --accent3:#0f172a;
 
   --navbg:rgba(255,255,255,.95);
-  --dark:#0f172a;         /* header/footer background */
-  --darkLine:rgba(255,255,255,.10);
 
+  /* dark header/footer */
+  --dark:#0f172a;
+  --dark2:#172554;
+  --darkLine:rgba(255,255,255,.10);
 }
 
 *{box-sizing:border-box}
@@ -33,12 +34,8 @@ body{
 /* =========================
    LINKS
    ========================= */
-a{
-  color:var(--accent2);
-}
-a:hover{
-  color:var(--accent);
-}
+a{color:var(--accent2)}
+a:hover{color:var(--accent)}
 
 .link{
   color:var(--accent2);
@@ -59,13 +56,14 @@ a:hover{
 }
 
 /* =========================
-   NAV
+   NAV (dark top bar)
    ========================= */
-
 .nav{
   position:sticky;
   top:0;
   z-index:10;
+  background:var(--dark);
+  border-bottom:1px solid var(--darkLine);
 }
 
 .nav__inner{
@@ -79,17 +77,15 @@ a:hover{
   font-weight:800;
   letter-spacing:.3px;
   text-decoration:none;
-  color:var(--text);
+  color:#fff;
 }
 
 .nav__links a{
   margin-left:18px;
   text-decoration:none;
-  color:rgba(15,23,42,.78);
+  color:rgba(255,255,255,.78);
 }
-.nav__links a:hover{
-  color:var(--accent);
-}
+.nav__links a:hover{color:#fff}
 
 /* =========================
    BUTTONS
@@ -106,57 +102,57 @@ a:hover{
   color:var(--text);
   transition:.2s ease;
 }
-.btn:hover{
-  background:#e2e8f0;
-}
+.btn:hover{background:#e2e8f0}
 
 .btn--primary{
   background:var(--accent);
   border-color:transparent;
-  color:#ffffff;
+  color:#fff;
   font-weight:600;
 }
-.btn--primary:hover{
-  background:#162e6e;
-}
+.btn--primary:hover{background:#162e6e}
 
 .btn--ghost{
   background:transparent;
 }
 
 /* =========================
-   HERO
+   HERO (base)
+   - hero 자체는 "레이아웃"만
+   - 배경은 modifier로 선택 (hero--photo)
    ========================= */
 .hero{
-  padding:140px 0 110px;
+  padding:120px 0 90px;
   border-bottom:1px solid var(--line);
-  background:
-    radial-gradient(900px 420px at 18% 10%, rgba(37,99,235,.14), transparent 60%),
-    radial-gradient(800px 420px at 80% 20%, rgba(30,58,138,.10), transparent 55%),
-    linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
 }
 
-.hero__inner{max-width:1000px}
+/* hero content */
+.hero__inner{
+  /* container 안에서 꽉 차게 */
+  max-width:none;
+}
 
 .pill{
   font-size:12px;
   letter-spacing:1px;
   text-transform:uppercase;
-  color:rgba(15,23,42,.55);
   margin:0 0 12px;
 }
 
-h1{
+/* hero 제목/본문 */
+.hero h1{
   font-size:54px;
   line-height:1.06;
   margin:10px 0 14px;
   letter-spacing:-0.5px;
+  color:inherit;
 }
 
-.lead{
+.hero .lead{
   font-size:18px;
-  color:rgba(15,23,42,.70);
   max-width:76ch;
+  color:inherit;
+  opacity:.9;
 }
 
 .hero__cta{
@@ -164,6 +160,53 @@ h1{
   gap:14px;
   margin-top:22px;
   flex-wrap:wrap;
+}
+
+/* 추가 환영문 (원하면 hero.html에서 사용) */
+.hero__welcome{
+  margin-top:16px;
+  max-width:70ch;
+  opacity:.92;
+}
+
+/* =========================
+   HERO PLACEHOLDER (no image)
+   - 홈에서 <section class="hero hero--photo"> 로 사용
+   ========================= */
+.hero--photo{
+  position:relative;
+  color:#fff;
+  border-bottom:1px solid var(--darkLine);
+  background:
+    radial-gradient(900px 420px at 18% 10%, rgba(37,99,235,.28), transparent 60%),
+    radial-gradient(800px 420px at 80% 20%, rgba(30,58,138,.22), transparent 55%),
+    linear-gradient(180deg, var(--dark) 0%, var(--dark2) 100%);
+}
+
+/* 미세 그리드 패턴(줄무늬X) */
+.hero--photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events:none;
+}
+
+.hero--photo .hero__inner{
+  position:relative;
+  z-index:1;
+}
+
+.hero--photo .pill{
+  color:rgba(255,255,255,.65);
+}
+
+.hero--photo .lead{
+  color:rgba(255,255,255,.85);
+  opacity:1;
 }
 
 /* =========================
@@ -262,11 +305,13 @@ h1{
 }
 
 /* =========================
-   FOOTER
+   FOOTER (dark bottom bar)
    ========================= */
 .footer{
-  border-top:1px solid var(--line);
+  background:var(--dark);
+  border-top:none;
   padding:36px 0 22px;
+  color:rgba(255,255,255,.78);
 }
 
 .footer__grid{
@@ -276,26 +321,20 @@ h1{
 }
 
 .footer a{
-  color:rgba(15,23,42,.72);
+  color:rgba(255,255,255,.78);
   text-decoration:none;
 }
-.footer a:hover{
-  color:var(--text);
-}
+.footer a:hover{color:#fff}
 
 .footer__bottom{
   margin-top:18px;
   padding-top:12px;
-  border-top:1px solid var(--line);
+  border-top:1px solid var(--darkLine);
+  color:rgba(255,255,255,.60);
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
-@media (max-width:900px){
-  h1{font-size:40px}
-  .grid{grid-template-columns:1fr}
-  .footer__grid{grid-template-columns:1fr}
+.footer .muted{
+  color:rgba(255,255,255,.70);
 }
 
 /* =========================
@@ -306,11 +345,9 @@ h1{
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap:28px;
 }
-
 @media (max-width:1000px){
   .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width:600px){
   .gallery-grid{ grid-template-columns: 1fr; }
 }
@@ -368,12 +405,16 @@ h1{
 
 .gallery-modal::backdrop{
   background: rgba(0,0,0,.35);
+  backdrop-filter: blur(6px);
 }
 
 .gallery-modal__inner{
   width: min(980px, calc(100vw - 32px));
   margin: 8vh auto 0;
   padding: 18px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:18px;
 }
 
 .gallery-modal__imgwrap{
@@ -391,65 +432,11 @@ h1{
 }
 
 /* =========================
-   DARK HEADER + FOOTER OVERRIDES
+   RESPONSIVE
    ========================= */
-
-/* Header (Nav) */
-.nav{
-  background:var(--dark);
-}
-
-.brand{
-  color:#fff;
-}
-
-.nav__links a{
-  color:rgba(255,255,255,.78);
-}
-
-.nav__links a:hover{
-  color:#fff;
-}
-
-/* Hero inside dark header area (home only; harmless elsewhere) */
-.hero{
-  padding:120px 0 90px;
-  background:
-    radial-gradient(900px 420px at 18% 10%, rgba(37,99,235,.22), transparent 60%),
-    radial-gradient(800px 420px at 80% 20%, rgba(30,58,138,.18), transparent 55%),
-    linear-gradient(180deg, #0f172a 0%, #172554 100%);
-  color:#fff;
-}
-
-.hero .lead{
-  color:rgba(255,255,255,.78);
-}
-
-.hero .pill{
-  color:rgba(255,255,255,.60);
-}
-
-/* Footer */
-.footer{
-  background:var(--dark);
-  border-top:none;
-  color:rgba(255,255,255,.78);
-}
-
-.footer a{
-  color:rgba(255,255,255,.78);
-}
-
-.footer a:hover{
-  color:#fff;
-}
-
-.footer__bottom{
-  border-top:1px solid var(--darkLine);
-  color:rgba(255,255,255,.60);
-}
-
-/* muted text inside footer should be readable */
-.footer .muted{
-  color:rgba(255,255,255,.70);
+@media (max-width:900px){
+  .hero{padding:92px 0 70px}
+  .hero h1{font-size:40px}
+  .grid{grid-template-columns:1fr}
+  .footer__grid{grid-template-columns:1fr}
 }
