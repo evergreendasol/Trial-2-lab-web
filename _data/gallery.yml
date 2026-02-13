@@ -27,3 +27,18 @@
   title: "Lab Activities"
   caption: "Seminars and group work"
   tag: "Lab"
+
+- src: "/assets/img/gallery/07.svg"
+  title: "Nutrient Solution Management"
+  caption: "Hydroponic nutrient monitoring system"
+  tag: "Hydroponics"
+
+- src: "/assets/img/gallery/08.svg"
+  title: "Light Spectrum Research"
+  caption: "Spectral-shifting film experiments"
+  tag: "Light"
+
+- src: "/assets/img/gallery/09.svg"
+  title: "Field Day & Outreach"
+  caption: "Open lab event and student demos"
+  tag: "Event"
