@@ -1,0 +1,29 @@
+- src: "/assets/img/gallery/01.svg"
+  title: "Smart Greenhouse Monitoring"
+  caption: "Sensor network & data logging setup"
+  tag: "Greenhouse"
+
+- src: "/assets/img/gallery/02.svg"
+  title: "Plant Factory Experiment"
+  caption: "Controlled environment cultivation trial"
+  tag: "Plant Factory"
+
+- src: "/assets/img/gallery/03.svg"
+  title: "Phenotyping & Vision"
+  caption: "Image-based phenotyping workflow"
+  tag: "AI / Vision"
+
+- src: "/assets/img/gallery/04.svg"
+  title: "Environmental Control"
+  caption: "Climate control & actuation"
+  tag: "Control"
+
+- src: "/assets/img/gallery/05.svg"
+  title: "Growth Analysis"
+  caption: "Data-driven growth modeling"
+  tag: "Modeling"
+
+- src: "/assets/img/gallery/06.svg"
+  title: "Lab Activities"
+  caption: "Seminars and group work"
+  tag: "Lab"
