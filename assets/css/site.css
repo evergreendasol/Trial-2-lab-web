@@ -1009,6 +1009,16 @@ a:hover{color:var(--accent)}
   margin:0;
 }
 
+.gallery-cap__top{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.gallery-tag{
+  font-size:11px;
+  white-space:nowrap;
+}
 .gallery-sub{
   margin:6px 0 0;
 }
@@ -1046,6 +1056,14 @@ a:hover{color:var(--accent)}
   background:var(--panel);
   border:1px solid var(--line);
   border-radius:18px;
+}
+
+.gallery-modal__top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:14px;
 }
 
 .gallery-modal__imgwrap{

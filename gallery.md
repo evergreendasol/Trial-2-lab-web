@@ -27,9 +27,9 @@ title: Gallery
         </button>
 
         <figcaption class="gallery-cap">
-          <div class="person__top">
+          <div class="gallery-cap__top">
             <h3 class="gallery-title"><span class="i18n-en">{{ item.title }}</span><span class="i18n-ko">{{ item.title_ko | default: item.title }}</span></h3>
-            {% if item.tag %}<span class="badge person__role"><span class="i18n-en">{{ item.tag }}</span><span class="i18n-ko">{{ item.tag_ko | default: item.tag }}</span></span>{% endif %}
+            {% if item.tag %}<span class="badge gallery-tag"><span class="i18n-en">{{ item.tag }}</span><span class="i18n-ko">{{ item.tag_ko | default: item.tag }}</span></span>{% endif %}
           </div>
           {% if item.caption %}<p class="muted small gallery-sub"><span class="i18n-en">{{ item.caption }}</span><span class="i18n-ko">{{ item.caption_ko | default: item.caption }}</span></p>{% endif %}
         </figcaption>
@@ -54,7 +54,7 @@ title: Gallery
     </div>
 
     <div class="gallery-modal__imgwrap">
-      <img id="gmImg" alt="" src="" />
+      <img id="gmImg" alt="Gallery image" src="" />
     </div>
   </div>
 </dialog>
